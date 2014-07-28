@@ -1,35 +1,15 @@
-# angular-seed — the seed for AngularJS apps
+# Vanilla App
 
-This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
-You can use it to quickly bootstrap your angular webapp projects and dev environment for these
-projects.
+This project is an application skeleton for a typical VOO website.
+It contains the necessary elements to quickly start new developments, namely :
 
-The seed contains a sample AngularJS application and is preconfigured to install the Angular
-framework and a bunch of development and testing tools for instant web development gratification.
-
-The seed app doesn't do much, just shows how to wire two controllers and views together.
-
-
-## Getting Started
-
-To get you started you can simply clone the angular-seed repository and install the dependencies:
-
-### Prerequisites
-
-You need git to clone the angular-seed repository. You can get it from
-[http://git-scm.com/](http://git-scm.com/).
-
-We also use a number of node.js tools to initialize and test angular-seed. You must have node.js and
-its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
-
-### Clone angular-seed
-
-Clone the angular-seed repository using [git][git]:
-
-```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
-```
+* Folder hierarchy to standardize source code organization across projects
+* Configuration of AngularJS with working controllers & views as example
+* Lightweight http server to host the application during development and to execute tests
+* End-to-end and unit tests using Protractor and Karma/Jasmine respectively
+* Bower for dependencies management
+* Grunt for tasks management (minification, ...)
+* ...
 
 ### Install Dependencies
 
