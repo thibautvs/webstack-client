@@ -4,11 +4,14 @@ This project is an application skeleton for a typical VOO website.
 It contains the necessary elements to quickly start new developments, namely :
 
 * Folder hierarchy to standardize source code organization across projects
-* Configuration of AngularJS with working controllers & views as example
+* Configuration of AngularJS with working controllers, views, directives, filters and services as example
+* i18n and l10n
+* Authentication
+* Wiring with our ReST API
 * Lightweight http server to host the application during development and to execute tests
-* End-to-end and unit tests using Protractor and Karma/Jasmine respectively
+* End-to-end and unit tests using Protractor and Karma/Jasmine
 * Bower for dependencies management
-* Grunt for tasks management (minification, ...)
+* Gulp for tasks management (minification, bundling, ...)
 * ...
 
 ### Install Dependencies
@@ -58,13 +61,13 @@ Now browse to the app at `http://localhost:8000/app/index.html`.
       index-async.html  --> just like index.html, but loads js files asynchronously
       js/               --> javascript files
         app.js          --> application
-        controllers.js  --> application controllers
-        directives.js   --> application directives
-        filters.js      --> custom angular filters
-        services.js     --> custom angular services
+        controllers     --> application controllers
+        directives      --> application directives
+        filters         --> custom angular filters
+        services        --> custom angular services
       partials/             --> angular view partials (partial html templates)
-        partial1.html
-        partial2.html
+        home.html
+        about.html
 
     test/               --> test config and source files
       protractor-conf.js    --> config file for running e2e tests with Protractor

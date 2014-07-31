@@ -7,14 +7,12 @@ describe('controllers', function(){
 
 
   it('should ....', inject(function($controller) {
-    //spec body
-    var myCtrl1 = $controller('MyCtrl1', { $scope: {} });
-    expect(myCtrl1).toBeDefined();
+    var controller = $controller('HomeController', { $scope: {} });
+    expect(controller).toBeDefined();
   }));
 
   it('should ....', inject(function($controller) {
-    //spec body
-    var myCtrl2 = $controller('MyCtrl2', { $scope: {} });
-    expect(myCtrl2).toBeDefined();
+    var controller = $controller('AboutController', { $scope: {} });
+    expect(controller).toBeDefined();
   }));
 });
