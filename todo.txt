@@ -1,0 +1,7 @@
+- configure gulp
+  * minify css & js
+  * bundle css & js
+  * run tests using karma
+  * replace script tags in index.html and index-async.html with bundled js & css
+- configure sass
+- multi-lingual support
