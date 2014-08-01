@@ -2,10 +2,10 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 var paths = {
-  styles: {
-    src: './app/styles',
-    files: './app/styles/**/*.scss',
-    dest: './app/styles/'
+  css: {
+    src: './app/css',
+    files: './app/css/**/*.scss',
+    dest: './app/css/'
   }
 };
 
@@ -27,23 +27,23 @@ var displayError = function(error) {
 }
 
 gulp.task('sass', function () {
-  gulp.src(paths.styles.files)
+  gulp.src(paths.css.files)
     .pipe(sass({
         outputStyle: 'compressed',
-        includePaths : [paths.styles.src]
+        includePaths : [paths.css.src]
     }))
-    .pipe(gulp.dest(paths.styles.dest));
+    .pipe(gulp.dest(paths.css.dest));
 });
 
 // This is the default task - which is run when `gulp` is run
 // The tasks passed in as an array are run before the tasks within the function
 gulp.task('default', ['sass'], function() {
   // Watch the files in the paths object, and when there is a change, fun the functions in the array
-  gulp.watch(paths.styles.files, ['sass'])
-  // Also when there is a change, display what file was changed, only showing the path after the 'styles' folder
+  gulp.watch(paths.css.files, ['sass'])
+  // Also when there is a change, display what file was changed, only showing the path after the 'css' folder
   .on('change', function(evt) {
     console.log(
-      '[watcher] File ' + evt.path.replace(/.*(?=styles)/,'') + ' was ' + evt.type + ', compiling...'
+      '[watcher] File ' + evt.path.replace(/.*(?=css)/,'') + ' was ' + evt.type + ', compiling...'
       );
     });
 });
