@@ -5,7 +5,7 @@ var paths = {
   css: {
     src: './app/css',
     files: './app/css/**/*.scss',
-    dest: './app/css/'
+    dest: './app/bundles/'
   }
 };
 
