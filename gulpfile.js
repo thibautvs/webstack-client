@@ -9,6 +9,6 @@ gulp.task('build', [
   'sass'
 ]);
 
-gulp.task('default', ['build'], function() {
+gulp.task('default', ['build'], function () {
   gulp.start('watch');
 });

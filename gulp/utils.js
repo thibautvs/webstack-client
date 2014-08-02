@@ -2,7 +2,7 @@
 
 // A display error function, to format and make custom errors more uniform.
 // Could be combined with gulp-util or npm colors for nicer output.
-var displayError = function(error) {
+var displayError = function (error) {
   var errorMsg = '[' + error.plugin + ']';
   errorMsg += ' ' + error.message.replace("\n",'');
 
