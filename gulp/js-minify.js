@@ -5,7 +5,7 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var config = require('./config');
 
-gulp.task('minify-js', function () {
+gulp.task('js-minify', function () {
     gulp.src(config.paths.js.files)
       .pipe(concat('app.js'))
       .pipe(uglify())

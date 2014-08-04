@@ -6,7 +6,7 @@ var map = require('map-stream');
 var fs = require('fs');
 var config = require('./config');
 
-gulp.task('lint', function() {
+gulp.task('js-lint', function() {
   fs.unlink(config.paths.logs.lint, function (err) {
     gulp.src(config.paths.js.files)
       .pipe(jshint())

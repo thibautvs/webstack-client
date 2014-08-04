@@ -2,15 +2,15 @@
 
 var gulp = require('gulp');
 
-require('./gulp/sass');
-require('./gulp/js');
-require('./gulp/lint');
+require('./gulp/sass-compile');
+require('./gulp/js-minify');
+require('./gulp/js-lint');
 require('./gulp/watch');
 
 gulp.task('build', [
-  'compile-sass',
-  'minify-js',
-  'lint'
+  'sass-compile',
+  'js-minify',
+  'js-lint'
 ]);
 
 gulp.task('default', ['build'], function () {
