@@ -6,6 +6,10 @@ module.exports = {
       src: './app/css',
       files: './app/css/**/*.scss',
       dest: './app/bundles/'
+    },
+    js: {
+      files: './app/js/**/*.js',
+      dest: './app/bundles/'
     }
   }
 };

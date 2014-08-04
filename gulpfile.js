@@ -3,10 +3,12 @@
 var gulp = require('gulp');
 
 require('./gulp/sass');
+require('./gulp/js');
 require('./gulp/watch');
 
 gulp.task('build', [
-  'sass'
+  'compile-sass',
+  'concat-minify-js'
 ]);
 
 gulp.task('default', ['build'], function () {
