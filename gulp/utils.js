@@ -1,5 +1,11 @@
 'use strict';
 
+exports.regex = {
+  trimCssPath: /.*(?=css[\\\/])/,
+  trimJsPath: /.*(?=js[\\\/])/
+};
+
+
 // A display error function, to format and make custom errors more uniform.
 // Could be combined with gulp-util or npm colors for nicer output.
 var displayError = function (error) {

@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var config = require('./config');
+var utils = require('./utils');
 
 // Watch the files in the paths object, and when there is a change, run the functions in the array
 gulp.task('watch', function () {
@@ -9,14 +10,14 @@ gulp.task('watch', function () {
     // When there is a change, display what file was changed, showing the path after the 'css' folder
     .on('change', function (evt) {
       console.log(
-        '[watcher] File ' + evt.path.replace(/^.*[\/\\]/, '') + ' was ' + evt.type + ', compiling...'
+        '[watcher] File ' + evt.path.replace(utils.regex.trimCssPath, '') + ' was ' + evt.type + ', compiling...'
         );
       });
 
   gulp.watch(config.paths.js.files, ['js-minify'])
     .on('change', function (evt) {
       console.log(
-        '[watcher] File ' + evt.path.replace(/^.*[\/\\]/, '') + ' was ' + evt.type + ', compiling...'
+        '[watcher] File ' + evt.path.replace(utils.regex.trimJsPath, '') + ' was ' + evt.type + ', compiling...'
         );
       });
 });

@@ -6,8 +6,8 @@ var uglify = require('gulp-uglify');
 var config = require('./config');
 
 gulp.task('js-minify', function () {
-    gulp.src(config.paths.js.files)
-      .pipe(concat('app.js'))
-      .pipe(uglify())
-      .pipe(gulp.dest(config.paths.js.dest));
+  gulp.src(config.paths.js.files)
+    .pipe(concat('app.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(config.paths.js.dest));
 });

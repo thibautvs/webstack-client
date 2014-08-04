@@ -6,3 +6,4 @@
 - auth
 - live reload (gulp ?)
 - validation framework ?
+- what do we do with displayError() (utils.js) : remove ?
