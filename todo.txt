@@ -1,5 +1,6 @@
 - configure gulp
-  * run tests using karma
+  * minify html
+  * run tests using karma + create log (html ?)
   * only minify + bundle if production, not dev
 - i18n and l10n
 - call to ReST API

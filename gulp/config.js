@@ -12,6 +12,7 @@ module.exports = {
       dest: './app/bundles/'
     },
     logs: {
+      src: 'logs',
       lint: 'logs/js-lint.txt'
     }
   }
