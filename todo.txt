@@ -1,9 +1,6 @@
 - configure gulp
-  * compile sass to css
-  * minify css & js
-  * bundle css & js
   * run tests using karma
-  * replace script tags in index.html and index-async.html with bundled js & css
+  * only minify + bundle if production, not dev
 - i18n and l10n
 - call to ReST API
 - auth

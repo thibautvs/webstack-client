@@ -10,6 +10,9 @@ module.exports = {
     js: {
       files: './app/js/**/*.js',
       dest: './app/bundles/'
+    },
+    logs: {
+      lint: 'logs/js-lint.txt'
     }
   }
 };

@@ -9,14 +9,14 @@ gulp.task('watch', function () {
     // When there is a change, display what file was changed, showing the path after the 'css' folder
     .on('change', function (evt) {
       console.log(
-        '[watcher] File ' + evt.path.replace(/.*(?=css)/,'') + ' was ' + evt.type + ', compiling...'
+        '[watcher] File ' + evt.path.replace(/^.*[\/\\]/, '') + ' was ' + evt.type + ', compiling...'
         );
       });
 
-  gulp.watch(config.paths.js.files, ['concat-minify-js'])
+  gulp.watch(config.paths.js.files, ['minify-js'])
     .on('change', function (evt) {
       console.log(
-        '[watcher] File ' + evt.path.replace(/.*(?=js)/,'') + ' was ' + evt.type + ', compiling...'
+        '[watcher] File ' + evt.path.replace(/^.*[\/\\]/, '') + ' was ' + evt.type + ', compiling...'
         );
       });
 });

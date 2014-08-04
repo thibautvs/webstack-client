@@ -45,9 +45,12 @@ this server is:
 
 ```
 npm start
+gulp
 ```
 
 Now browse to the app at `http://localhost:8000/app/index.html`.
+Gulp performs a build (JS/CSS minification, ...) and also watches for changes
+so that it will retrigger a build automatically.
 
 
 
