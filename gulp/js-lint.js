@@ -20,13 +20,13 @@ var fileReporter = map(function (file, cb) {
     var wstream = fs.createWriteStream(config.paths.logs.lint, { encoding: 'utf8', flags : 'a' });
 
     wstream.once('open', function (fd) {
-      wstream.write(utils.trimJsPath(file.path) + '\r\n');
+      wstream.write(utils.trimJsPath(file.path) + utils.endOfLine);
       file.jshint.results.forEach(function (msg) {
         if (msg) {
-          wstream.write('  - ' + msg.error.reason + ' (line ' + msg.error.line + ')\r\n');
+          wstream.write('  - ' + msg.error.reason + ' (line ' + msg.error.line + ')' + utils.endOfLine);
         }
       });
-      wstream.write('\r\n');
+      wstream.write(utils.endOfLine);
       wstream.end();
     });
   }

@@ -1,5 +1,7 @@
 'use strict';
 
+exports.endOfLine = require('os').EOL;
+
 exports.trimCssPath = function (path) {
   return path.replace(/.*(?=css[\\\/])/, '');
 };
