@@ -2,13 +2,13 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var config = require('./config');
+var paths = require('./config').paths;
 
 gulp.task('sass-compile', function () {
-  gulp.src(config.paths.css.files)
+  gulp.src(paths.css.files)
     .pipe(sass({
         outputStyle: 'compressed',
-        includePaths : [config.paths.css.src]
+        includePaths : [paths.css.src]
     }))
-    .pipe(gulp.dest(config.paths.css.dest));
+    .pipe(gulp.dest(paths.css.dest));
 });

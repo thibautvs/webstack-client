@@ -4,13 +4,13 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var map = require('map-stream');
 var fs = require('fs');
-var config = require('./config');
 var utils = require('./utils');
+var paths = require('./config').paths;
 
-gulp.task('js-lint', function() {
-  fs.mkdir(config.paths.logs.src, function (err) {
-    fs.unlink(config.paths.logs.lint, function (err) {
-      gulp.src(config.paths.js.files)
+gulp.task('js-hint', function() {
+  fs.mkdir(paths.logs.src, function (err) {
+    fs.unlink(paths.logs.jsHint, function (err) {
+      gulp.src(paths.js.files)
         .pipe(jshint())
         .pipe(fileReporter);
     });
@@ -19,7 +19,7 @@ gulp.task('js-lint', function() {
 
 var fileReporter = map(function (file, cb) {
   if (!file.jshint.success) {
-    var wstream = fs.createWriteStream(config.paths.logs.lint, { encoding: 'utf8', flags : 'a' });
+    var wstream = fs.createWriteStream(paths.logs.jsHint, { encoding: 'utf8', flags : 'a' });
 
     wstream.once('open', function (fd) {
       wstream.write(utils.trimJsPath(file.path) + utils.endOfLine);

@@ -13,7 +13,7 @@ module.exports = {
     },
     logs: {
       src: 'logs',
-      lint: 'logs/js-lint.txt'
+      jsHint: 'logs/js-hint.txt'
     }
   }
 };
