@@ -1,9 +1,9 @@
-module.exports = function(config){
+module.exports = function (config) {
   config.set({
 
-    basePath : '../',
+    basePath: '../',
 
-    files : [
+    files: [
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
@@ -11,23 +11,24 @@ module.exports = function(config){
       'test/unit/**/*.js'
     ],
 
-    autoWatch : true,
+    exclude: [],
 
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'chai', 'sinon'],
 
-    browsers : ['Chrome'],
+    preprocessors: {},
 
-    plugins : [
-            'karma-chrome-launcher',
-            'karma-firefox-launcher',
-            'karma-jasmine',
-            'karma-junit-reporter'
-            ],
+    reporters: ['progress'],
 
-    junitReporter : {
-      outputFile: 'test_out/unit.xml',
-      suite: 'unit'
-    }
+    port: 9876,
 
+    colors: true,
+
+    logLevel: config.LOG_INFO,
+
+    autoWatch: true,
+
+    browsers: ['Chrome', 'Firefox', 'IE'],
+
+    singleRun: false
   });
 };

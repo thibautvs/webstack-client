@@ -19,7 +19,7 @@ gulp.task('js-hint', function () {
 
 var fileReporter = map(function (file, cb) {
   if (!file.jshint.success) {
-    var wstream = fs.createWriteStream(paths.logs.jsHint, {encoding: 'utf8', flags : 'a'});
+    var wstream = fs.createWriteStream(paths.logs.jsHint, {encoding: 'utf8', flags: 'a'});
 
     wstream.once('open', function (fd) {
       wstream.write(utils.trimJsPath(file.path) + utils.endOfLine);
