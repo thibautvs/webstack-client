@@ -9,7 +9,7 @@ It contains the necessary elements to quickly start new developments, namely :
 * Authentication
 * Wiring with our ReST API
 * Lightweight http server to host the application during development and to execute tests
-* End-to-end and unit tests using Protractor and Karma/Jasmine
+* End-to-end and unit tests using Protractor and Mocha/Chai/Sinon run with Karma
 * Bower for dependencies management
 * Gulp for tasks management (minification, bundling, ...)
 * ...
@@ -37,7 +37,7 @@ folders in your project.
 * `app/bower_components` - contains the angular framework files
 
 *Note that the `bower_components` folder would normally be installed in the root folder but
-angular-seed changes this location through the `.bowerrc` file.  Putting it in the app folder makes
+the app changes this location through the `.bowerrc` file.  Putting it in the app folder makes
 it easier to serve the files by a webserver.*
 
 ### Run the Application
@@ -88,13 +88,13 @@ so that it will retrigger a build automatically.
 
 ## Testing
 
-There are two kinds of tests in the angular-seed application: Unit tests and End to End tests.
+There are two kinds of tests in the application: Unit tests and End to End tests.
 
 ### Running Unit Tests
 
-The angular-seed app comes preconfigured with unit tests. These are written in
-[Jasmine][jasmine], which we run with the [Karma Test Runner][karma]. We provide a Karma
-configuration file to run them.
+The app comes preconfigured with unit tests. These are written in
+[Mocha][mocha]/[Chai][chai]/[Sinon][sinon], which are run with the [Karma Test Runner][karma].
+A Karma configuration file is provided to run them.
 
 * the configuration is found at `test/karma.conf.js`
 * the unit tests are found in `test/unit/`.
@@ -121,8 +121,8 @@ npm run test-single-run
 
 ### End to end testing
 
-The angular-seed app comes with end-to-end tests, again written in [Jasmine][jasmine]. These tests
-are run with the [Protractor][protractor] End-to-End test runner.  It uses native events and has
+The app comes with end-to-end tests, again written in [Mocha][mocha]/[Chai][chai]/[Sinon][sinon].
+These tests are run with the [Protractor][protractor] End-to-End test runner.  It uses native events and has
 special features for Angular applications.
 
 * the configuration is found at `test/protractor-conf.js`
@@ -136,8 +136,8 @@ can interact with it.
 npm start
 ```
 
-In addition, since Protractor is built upon WebDriver we need to install this.  The angular-seed
-project comes with a predefined script to do this:
+In addition, since Protractor is built upon WebDriver we need to install this.  The app
+comes with a predefined script to do this:
 
 ```
 npm run update-webdriver
@@ -156,11 +156,7 @@ This script will execute the end-to-end tests against the application being host
 development server.
 
 
-## Updating Angular
-
-Previously we recommended that you merge in changes to angular-seed into your own fork of the project.
-Now that the angular framework library code and tools are acquired through package managers (npm and
-bower) you can use these tools instead to update the dependencies.
+## Updating the application
 
 You can update the tool dependencies by running:
 
@@ -181,7 +177,7 @@ This will find the latest versions that match the version ranges specified in th
 
 ## Loading Angular Asynchronously
 
-The angular-seed project supports loading the framework and application scripts asynchronously.  The
+The app supports loading the framework and application scripts asynchronously.  The
 special `index-async.html` is designed to support this style of loading.  For it to work you must
 inject a piece of Angular JavaScript into the HTML page.  The project has a predefined script to help
 do this.
@@ -205,7 +201,7 @@ etc to function properly when an html page is opened via `file://` scheme instea
 
 ### Running the App during Development
 
-The angular-seed project comes preconfigured with a local development webserver.  It is a node.js
+The app comes preconfigured with a local development webserver.  It is a node.js
 tool called [http-server][http-server].  You can start this webserver with `npm start` but you may choose to
 install the tool globally:
 
@@ -244,8 +240,8 @@ reverse-proxying the backend server(s) and webserver(s).
 ### Travis CI
 
 [Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits
-to your repository and execute scripts such as building the app or running tests. The angular-seed
-project contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your
+to your repository and execute scripts such as building the app or running tests. The app
+contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your
 tests when you push to GitHub.
 
 You will need to enable the integration between Travis and GitHub. See the Travis website for more
@@ -271,7 +267,9 @@ For more information on AngularJS please check out http://angularjs.org/
 [npm]: https://www.npmjs.org/
 [node]: http://nodejs.org
 [protractor]: https://github.com/angular/protractor
-[jasmine]: http://pivotal.github.com/jasmine/
+[mocha]: http://visionmedia.github.io/mocha/
+[chai]: http://chaijs.com/
+[sinon]: http://sinonjs.org/
 [karma]: http://karma-runner.github.io
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
