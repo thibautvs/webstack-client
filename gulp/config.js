@@ -14,6 +14,10 @@ module.exports = {
     logs: {
       src: 'logs',
       jsHint: 'logs/js-hint.txt'
+    },
+    tests: {
+      karmaConfig: './test/karma.conf.js',
+      protractorConfig: './test/protractor-conf.js'
     }
   }
 };
