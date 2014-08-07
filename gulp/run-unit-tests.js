@@ -10,6 +10,11 @@ gulp.task('run-unit-tests', function () {
   return gulp.src('fakePath')
     .pipe(karma({
       configFile: paths.tests.karmaConfig,
-      action: 'watch'
-    }));
+      action: 'run'
+    }))
+    .on('error', function(err) {
+      // End the stream instead of putting it in error otherwise gulp process
+      // will exit, preventing it to watch for further file changes.
+      this.emit('end');
+    });;
 });

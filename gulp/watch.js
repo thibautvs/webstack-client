@@ -10,8 +10,8 @@ gulp.task('watch', function () {
       console.log('[watcher] File ' + utils.trimCssPath(evt.path) + ' was ' + evt.type + ', compiling...');
     });
 
-  gulp.watch(paths.js.files, ['js-minify'])
+  gulp.watch(paths.js.files, ['js-minify', 'run-unit-tests'])
     .on('change', function (evt) {
-      console.log('[watcher] File ' + utils.trimJsPath(evt.path) + ' was ' + evt.type + ', minifying + bundling...');
+      console.log('[watcher] File ' + utils.trimJsPath(evt.path) + ' was ' + evt.type + ', minifying + bundling + running tests...');
     });
 });
