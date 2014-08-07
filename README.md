@@ -161,7 +161,7 @@ development server.
 ## JSHint
 
 Gulp will run [JSHint][jshint] to perform JS inspection and report errors. If there are any, you will
-find information about these in logs/js-hint.txt
+find information about these in `logs/js-hint.txt`
 
 ## Updating the application
 
