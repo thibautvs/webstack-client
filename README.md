@@ -82,10 +82,10 @@ so that it will retrigger a build automatically.
         scenarios.js
       karma.conf.js         --> config file for running unit tests with Karma
       unit/                 --> unit level specs/tests
-        controllersSpec.js      --> specs for controllers
-        directivessSpec.js      --> specs for directives
-        filtersSpec.js          --> specs for filters
-        servicesSpec.js         --> specs for services
+        controllers-spec.js      --> specs for controllers
+        directivess-spec.js      --> specs for directives
+        filters-spec.js          --> specs for filters
+        services-spec.js         --> specs for services
 
 
 ## Testing
@@ -157,6 +157,11 @@ npm run protractor
 This script will execute the end-to-end tests against the application being hosted on the
 development server.
 
+
+## JSHint
+
+Gulp will run [JSHint][jshint] to perform JS inspection and report errors. If there are any, you will
+find information about these in logs/js-hint.txt
 
 ## Updating the application
 
@@ -275,3 +280,4 @@ For more information on AngularJS please check out http://angularjs.org/
 [karma]: http://karma-runner.github.io
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
+[jshint]: http://www.jshint.com/
