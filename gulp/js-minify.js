@@ -6,7 +6,7 @@ var uglify = require('gulp-uglify');
 var paths = require('./config').paths;
 
 gulp.task('js-minify', function () {
-  gulp.src(paths.js.files)
+  return gulp.src(paths.js.files)
     .pipe(concat('app.js'))
     .pipe(uglify())
     .pipe(gulp.dest(paths.js.dest));

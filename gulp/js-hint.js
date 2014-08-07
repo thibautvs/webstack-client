@@ -11,7 +11,7 @@ var jsErrors = false;
 gulp.task('js-hint', function () {
   fs.mkdir(paths.logs.src, function (err) {
     fs.unlink(paths.logs.jsHint, function (err) {
-      gulp.src(paths.js.files)
+      return gulp.src(paths.js.files)
         .pipe(jshint())
         .pipe(fileReporter)
         .on('end', function () {
