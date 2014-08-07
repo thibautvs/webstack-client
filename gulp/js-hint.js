@@ -4,17 +4,23 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var map = require('map-stream');
 var fs = require('fs');
-var colors = require('colors');
 var utils = require('./utils');
 var paths = require('./config').paths;
-var loggedToConsole = false;
+var jsErrors = false;
 
 gulp.task('js-hint', function () {
   fs.mkdir(paths.logs.src, function (err) {
     fs.unlink(paths.logs.jsHint, function (err) {
       gulp.src(paths.js.files)
         .pipe(jshint())
-        .pipe(fileReporter);
+        .pipe(fileReporter)
+        .on('end', function () {
+          if (jsErrors) {
+            utils.logError('JSHint: errors detected. See ' + paths.logs.jsHint + ' for more info.')
+          } else {
+            utils.logSuccess('JSHint: no errors detected.');
+          }
+        });
     });
   });
 });
@@ -34,10 +40,7 @@ var fileReporter = map(function (file, cb) {
       wstream.end();
     });
 
-    if (!loggedToConsole) {
-      console.error('JS errors detected. See %s for more info.'.red, paths.logs.jsHint);
-      loggedToConsole = true;
-    }
+    jsErrors = true;
   }
   cb(null, file);
 });

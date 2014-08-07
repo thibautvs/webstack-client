@@ -1,5 +1,7 @@
 'use strict';
 
+var colors = require('colors');
+
 exports.endOfLine = require('os').EOL;
 
 exports.trimCssPath = function (path) {
@@ -9,6 +11,14 @@ exports.trimCssPath = function (path) {
 exports.trimJsPath = function (path) {
   return path.replace(/.*(?=js[\\\/])/, '');
 };
+
+exports.logError = function (msg) {
+  console.error(msg.red);
+}
+
+exports.logSuccess = function (msg) {
+  console.log(msg.green);
+}
 
 exports.displayError = function (err) {
   // A display error function, to format and make custom errors more uniform.
