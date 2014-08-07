@@ -1,14 +1,18 @@
 'use strict';
 
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-ruby-sass');
+var plumber = require('gulp-plumber');
+var utils = require('./utils');
 var paths = require('./config').paths;
 
 gulp.task('sass-compile', function () {
   return gulp.src(paths.css.files)
+    .pipe(plumber({
+      errorHandler: utils.logTaskError
+    }))
     .pipe(sass({
-        outputStyle: 'compressed',
-        includePaths : [paths.css.src]
+      style: 'compressed'
     }))
     .pipe(gulp.dest(paths.css.dest));
 });
