@@ -4,8 +4,10 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var map = require('map-stream');
 var fs = require('fs');
+var colors = require('colors');
 var utils = require('./utils');
 var paths = require('./config').paths;
+var loggedToConsole = false;
 
 gulp.task('js-hint', function () {
   fs.mkdir(paths.logs.src, function (err) {
@@ -31,6 +33,11 @@ var fileReporter = map(function (file, cb) {
       wstream.write(utils.endOfLine);
       wstream.end();
     });
+
+    if (!loggedToConsole) {
+      console.error('JS errors detected. See %s for more info.'.red, paths.logs.jsHint);
+      loggedToConsole = true;
+    }
   }
   cb(null, file);
 });

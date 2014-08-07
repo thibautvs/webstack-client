@@ -1,8 +1,9 @@
 - configure gulp
   * minify html
-  * run tests using karma + create log (html ?)
+  * HTML report for unit and e2e tests (logs folder)
   * configure protractor with mocha + test sinon
   * only minify + bundle if production, not dev
+  * watcher for JSHint
 - i18n and l10n
 - call to ReST API
 - auth
