@@ -4,9 +4,8 @@
   * configure protractor with mocha + test sinon
   * only minify + bundle if production, not dev
   * watcher for JSHint
+  * watcher (css, js) not working after unit tests task
 - i18n and l10n
 - call to ReST API
 - auth
 - live reload (gulp ?)
-- validation framework ?
-- what do we do with displayError() (utils.js) : remove ?
