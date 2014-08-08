@@ -9,12 +9,12 @@ gulp.task('run-unit-tests', function () {
   // the files array defined in the karma config file.
   return gulp.src('fakePath')
     .pipe(karma({
-      configFile: paths.tests.karmaConfig,
+      configFile: paths.tests.unit.config,
       action: 'run'
     }))
-    .on('error', function(err) {
+    .on('error', function (err) {
       // End the stream instead of putting it in error otherwise gulp process
       // will exit, preventing it to watch for further file changes.
       this.emit('end');
-    });;
+    });
 });

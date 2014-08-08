@@ -15,8 +15,16 @@ module.exports = {
       jsHint: 'logs/js-hint.txt'
     },
     tests: {
-      karmaConfig: './test/karma.conf.js',
-      protractorConfig: './test/protractor-conf.js'
+      unit: {
+        config: './test/karma.conf.js',
+        filesToWatch: [
+          './app/js/**/*.js',
+          './test/unit/**/*.js'
+        ]
+      },
+      e2e: {
+        config: './test/protractor-conf.js'
+      }
     }
   }
 };

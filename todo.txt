@@ -4,7 +4,6 @@
   * configure protractor with mocha + test sinon
   * only minify + bundle if production, not dev
   * watcher for JSHint
-  * watcher (css, js) not working after unit tests task
 - i18n and l10n
 - call to ReST API
 - auth
