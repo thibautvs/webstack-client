@@ -2,9 +2,11 @@
   * minify html
   * HTML report for unit and e2e tests (logs folder)
   * configure protractor with mocha + test sinon
-  * only minify + bundle if production, not dev
+  * only minify + bundle if production, not dev + fingerprint bundles
   * watcher for JSHint
+  ? live reload
+  ? image optimization (gulp-image-optimization)
+  ? auto CSS prefixing (gulp-autoprefixer)
 - i18n and l10n
 - call to ReST API
 - auth
-- live reload (gulp ?)
