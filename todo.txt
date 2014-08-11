@@ -4,7 +4,6 @@
   * configure protractor with mocha + test sinon
   * only minify + bundle if production, not dev + fingerprint bundles
   * watcher for JSHint
-  * use gulp clean for "bundles" folder
   * use gulp-filesize to log in console size of css and js bundle
   ? live reload
   ? image optimization (gulp-image-optimization)

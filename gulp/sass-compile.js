@@ -14,5 +14,5 @@ gulp.task('sass-compile', function () {
     .pipe(sass({
       style: 'compressed'
     }))
-    .pipe(gulp.dest(paths.css.dest));
+    .pipe(gulp.dest(paths.bundles));
 });

@@ -14,5 +14,5 @@ gulp.task('js-minify', function () {
     }))
     .pipe(concat('app.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(paths.js.dest));
+    .pipe(gulp.dest(paths.bundles));
 });

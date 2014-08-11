@@ -2,13 +2,12 @@
 
 module.exports = {
   paths: {
+    bundles: './app/bundles/',
     css: {
-      files: './app/css/**/*.scss',
-      dest: './app/bundles/'
+      files: './app/css/**/*.scss'
     },
     js: {
-      files: './app/js/**/*.js',
-      dest: './app/bundles/'
+      files: './app/js/**/*.js'
     },
     logs: {
       src: 'logs',
