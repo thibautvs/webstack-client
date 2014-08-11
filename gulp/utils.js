@@ -2,11 +2,14 @@
 
 var gutil = require('gulp-util');
 var colors = require('colors');
+var isProduction = !gutil.env.dev;
 
 exports.endOfLine = require('os').EOL;
 
+exports.isProduction = isProduction;
+
 exports.ifProduction = function (fn) {
-  return gutil.env.dev ? gutil.noop() : fn();
+  return isProduction ? fn() : gutil.noop();
 }
 
 exports.trimCssPath = function (path) {

@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
+var utils = require('./gulp/utils');
 
 require('./gulp/clean');
 require('./gulp/sass-compile');
@@ -18,5 +19,7 @@ gulp.task('build', [
 ]);
 
 gulp.task('default', ['build'], function () {
-  gulp.start('watch');
+  if (!utils.isProduction) {
+    gulp.start('watch');
+  }
 });
