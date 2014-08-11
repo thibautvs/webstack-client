@@ -3,9 +3,9 @@
 module.exports = {
   paths: {
     bundles: './app/bundles/',
-    css: {
-      main: './app/css/app.scss',
-      files: './app/css/**/*.scss'
+    sass: {
+      main: './app/sass/app.scss',
+      files: './app/sass/**/*.scss'
     },
     js: {
       files: './app/js/**/*.js'

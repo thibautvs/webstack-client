@@ -9,7 +9,7 @@ var utils = require('./utils');
 var paths = require('./config').paths;
 
 gulp.task('sass-compile', function () {
-  return gulp.src(paths.css.main)
+  return gulp.src(paths.sass.main)
     .pipe(plumber({
       errorHandler: utils.logTaskError
     }))

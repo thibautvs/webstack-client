@@ -5,7 +5,7 @@ var utils = require('./utils');
 var paths = require('./config').paths;
 
 gulp.task('watch', function () {
-  gulp.watch(paths.css.files, ['sass-compile'])
+  gulp.watch(paths.sass.files, ['sass-compile'])
     .on('change', function (file) {
       utils.logWatchEvent(utils.trimCssPath(file.path), file.type, 'compiling');
     });
