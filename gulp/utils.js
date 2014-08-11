@@ -5,7 +5,9 @@ var colors = require('colors');
 
 exports.endOfLine = require('os').EOL;
 
-exports.isProduction = !gutil.env.dev;
+exports.ifProduction = function (fn) {
+  return gutil.env.dev ? gutil.noop() : fn();
+}
 
 exports.trimCssPath = function (path) {
   return path.replace(/.*(?=css[\\\/])/, '');
