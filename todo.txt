@@ -4,6 +4,8 @@
   * configure protractor with mocha + test sinon
   * only minify + bundle if production, not dev + fingerprint bundles
   * watcher for JSHint
+  * _variables.scss file example (with a font for ex)
+  * source maps for SASS (only dev mode)
   ? live reload
   ? image optimization (gulp-image-optimization)
   ? auto CSS prefixing (gulp-autoprefixer)

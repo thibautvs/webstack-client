@@ -1,8 +1,11 @@
 'use strict';
 
+var gutil = require('gulp-util');
 var colors = require('colors');
 
 exports.endOfLine = require('os').EOL;
+
+exports.isProduction = !gutil.env.dev;
 
 exports.trimCssPath = function (path) {
   return path.replace(/.*(?=css[\\\/])/, '');
