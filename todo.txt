@@ -6,9 +6,6 @@
   * watcher for JSHint
   * make sure clean task is synchronous (use it as task dependency in the main bundling file doing HTML/CSS/JS)
   * update gulp-ruby-sass (sourcemap not working, wrong path)
-  ? image optimization (gulp-image-optimization)
-  ? auto CSS prefixing (gulp-autoprefixer)
-  ? investigate gulp-changed
 - i18n and l10n
 - call to ReST API
 - auth
