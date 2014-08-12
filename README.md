@@ -44,36 +44,25 @@ it easier to serve the files by a webserver.*
 
 ### Run the Application
 
-The project is preconfigured with a simple development web server.
-The simplest way to start the server is:
+To run the application in development mode, use the `gulp --dev` command
+(or the alias `npm start`). Development mode skips the bundling and minification
+process for easier debugging, generates SASS source maps, watches for file changes
+to retrigger related tasks automatically (such as SASS compilation, for example)
+and starts a light development web server configured with [LiveReload][livereload].
 
-```
-npm start
-```
+The app can then be accessed at `http://localhost:8080`.
 
-The app can then be viewed at `http://localhost:8000/app/index.html`.
-
-A build must also be executed for the app to run :
-
-```
-gulp --dev
-```
-
-Running gulp in development mode (using `gulp --dev`) skips the bundling
-and minification process for easier debugging. Production mode is obtained
-by simply running the `gulp` command. Gulp also watches for file changes so that
-it will retrigger a build automatically.
+Production mode is obtained by simply running the `gulp` command.
 
 
 
 ## Directory Layout
 
     app/                --> all of the files to be used in production
-      css/              --> css files
-        app.css         --> default stylesheet
+      sass/             --> sass files
+        app.scss        --> main stylesheet
       img/              --> image files
       index.html        --> app layout file (the main html template file of the app)
-      index-async.html  --> just like index.html, but loads js files asynchronously
       js/               --> javascript files
         app.js          --> application
         controllers     --> application controllers
@@ -289,3 +278,4 @@ For more information on AngularJS please check out http://angularjs.org/
 [travis]: https://travis-ci.org/
 [http-server]: https://github.com/nodeapps/http-server
 [jshint]: http://www.jshint.com/
+[livereload]: http://livereload.com/

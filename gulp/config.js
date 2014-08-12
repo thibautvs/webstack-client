@@ -2,7 +2,14 @@
 
 module.exports = {
   paths: {
+    app: './app',
     bundles: './app/bundles/',
+    html: {
+      files: [
+        './app/index.html',
+        './app/partials/**/*.html'
+      ]
+    },
     sass: {
       main: './app/sass/app.scss',
       files: './app/sass/**/*.scss'

@@ -6,7 +6,6 @@
   * watcher for JSHint
   * source maps for SASS (only dev mode)
   * make sure clean task is synchronous (or add as dependency)
-  ? live reload
   ? image optimization (gulp-image-optimization)
   ? auto CSS prefixing (gulp-autoprefixer)
   ? investigate gulp-ng-annotate

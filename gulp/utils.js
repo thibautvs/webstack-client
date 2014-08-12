@@ -12,8 +12,16 @@ exports.ifProduction = function (fn) {
   return isProduction ? fn() : gutil.noop();
 }
 
+exports.ifDevelopment = function (fn) {
+  return isProduction ? gutil.noop() : fn();
+}
+
+exports.trimHtmlPath = function (path) {
+  return path.replace(/.*(?=app[\\\/])/, '');
+}
+
 exports.trimCssPath = function (path) {
-  return path.replace(/.*(?=css[\\\/])/, '');
+  return path.replace(/.*(?=sass[\\\/])/, '');
 };
 
 exports.trimJsPath = function (path) {
