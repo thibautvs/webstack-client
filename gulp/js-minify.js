@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');
+var ngAnnotate = require('gulp-ng-annotate');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var byteDiff = require('gulp-bytediff');
@@ -15,6 +16,7 @@ gulp.task('js-minify', function () {
       errorHandler: utils.logTaskError
     }))
     .pipe(concat('app.js'))
+    .pipe(utils.ifProduction(ngAnnotate))
     .pipe(utils.ifProduction(byteDiff.start))
     .pipe(utils.ifProduction(uglify))
     .pipe(utils.ifProduction(byteDiff.stop))
