@@ -4,15 +4,16 @@ This project is an application skeleton for a typical VOO website.
 It contains the necessary elements to quickly start new developments, namely :
 
 * Configuration of AngularJS with working controllers, views, directives, filters and services as example
-* Folder hierarchy to standardize source code organization across projects
-* i18n and l10n
-* Authentication
-* Wiring with a ReST API
-* Lightweight http server to host the application during development and to execute tests
-* End-to-end and unit tests using Protractor and Mocha/Chai/Sinon run with Karma on PhantomJS
+* Folder hierarchy enabling app scalability + standardize source code organization across projects
+* SASS compilation with source maps support
 * Bower for dependencies management
-* Gulp for tasks management such as minification, bundling, etc
+* Gulp for tasks management (minification, bundling, etc) supporting development and production modes
 * JSHint output file for JS errors inspection
+* Lightweight development web server with LiveReload support
+* End-to-end and unit tests using Protractor and Mocha/Chai/Sinon run with Karma on PhantomJS
+* Authentication
+* i18n and l10n
+* Wiring with a ReST API
 * ...
 
 ### Install Dependencies
