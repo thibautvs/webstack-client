@@ -12,7 +12,8 @@ module.exports = {
     },
     sass: {
       main: './app/sass/app.scss',
-      files: './app/sass/**/*.scss'
+      files: './app/sass/**/*.scss',
+      sourcemapPath: '../sass'
     },
     js: {
       files: './app/js/**/*.js'

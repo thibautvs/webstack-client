@@ -4,8 +4,7 @@
   * configure protractor with mocha + test sinon
   * only minify + bundle if production, not dev + fingerprint bundles
   * watcher for JSHint
-  * source maps for SASS (only dev mode)
-  * make sure clean task is synchronous (or add as dependency)
+  * make sure clean task is synchronous (use it as task dependency in the main bundling file doing HTML/CSS/JS)
   ? image optimization (gulp-image-optimization)
   ? auto CSS prefixing (gulp-autoprefixer)
   ? investigate gulp-ng-annotate

@@ -14,7 +14,10 @@ gulp.task('sass-compile', function () {
     .pipe(plumber({
       errorHandler: utils.logTaskError
     }))
-    .pipe(sass())
+    .pipe(sass({
+      sourcemap: utils.isDevelopment,
+      sourcemapPath: paths.sass.sourcemapPath
+    }))
     .pipe(utils.ifProduction(byteDiff.start))
     .pipe(utils.ifProduction(minifyCSS))
     .pipe(utils.ifProduction(byteDiff.stop))
