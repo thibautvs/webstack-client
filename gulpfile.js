@@ -18,7 +18,7 @@ gulp.task('build', function (cb) {
     'build-clean',
     'build-sass',
     //'build-bundle',
-    'js-minify',
+    //'js-minify',
     ['js-hint', 'run-unit-tests'],
     cb);
 });

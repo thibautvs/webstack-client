@@ -15,7 +15,7 @@ gulp.task('watch', function () {
       utils.logWatchEvent(utils.trimCssPath(file.path), file.type, 'compiling');
     });
 
-  gulp.watch(paths.js.files, ['js-minify'])
+  gulp.watch(paths.js.files, ['livereload'])
     .on('change', function (file) {
       utils.logWatchEvent(utils.trimJsPath(file.path), file.type, 'minifying + bundling');
     });
