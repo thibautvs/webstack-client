@@ -5,12 +5,12 @@ var utils = require('./utils');
 var paths = require('./config').paths;
 
 gulp.task('watch', function () {
-  gulp.watch(paths.html.files, ['html-minify'])
+  gulp.watch(paths.html.files, ['livereload'])
     .on('change', function (file) {
       utils.logWatchEvent(utils.trimHtmlPath(file.path), file.type, 'minifying');
     });
 
-  gulp.watch(paths.sass.files, ['sass-compile'])
+  gulp.watch(paths.sass.files, ['build-sass'])
     .on('change', function (file) {
       utils.logWatchEvent(utils.trimCssPath(file.path), file.type, 'compiling');
     });

@@ -6,11 +6,10 @@ var connect = require('gulp-connect');
 var utils = require('./utils');
 var paths = require('./config').paths;
 
-gulp.task('html-minify', function () {
-  return gulp.src(paths.html.files)
+gulp.task('livereload', function () {
+  return gulp.src('')
     .pipe(plumber({
       errorHandler: utils.logTaskError
     }))
     .pipe(utils.ifDevelopment(connect.reload));
-    //TODO minify HTML
 });

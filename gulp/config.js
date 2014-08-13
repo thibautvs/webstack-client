@@ -3,7 +3,7 @@
 module.exports = {
   paths: {
     app: './app',
-    bundles: './app/bundles/',
+    build: './app/build/',
     html: {
       files: [
         './app/index.html',

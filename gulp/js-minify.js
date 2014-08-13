@@ -20,6 +20,6 @@ gulp.task('js-minify', function () {
     .pipe(utils.ifProduction(byteDiff.start))
     .pipe(utils.ifProduction(uglify))
     .pipe(utils.ifProduction(byteDiff.stop))
-    .pipe(gulp.dest(paths.bundles))
+    .pipe(gulp.dest(paths.build))
     .pipe(utils.ifDevelopment(connect.reload));
 });

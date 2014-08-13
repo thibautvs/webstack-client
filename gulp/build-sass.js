@@ -9,7 +9,7 @@ var connect = require('gulp-connect');
 var utils = require('./utils');
 var paths = require('./config').paths;
 
-gulp.task('sass-compile', function () {
+gulp.task('build-sass', function () {
   return gulp.src(paths.sass.main)
     .pipe(plumber({
       errorHandler: utils.logTaskError
@@ -21,6 +21,6 @@ gulp.task('sass-compile', function () {
     .pipe(utils.ifProduction(byteDiff.start))
     .pipe(utils.ifProduction(minifyCSS))
     .pipe(utils.ifProduction(byteDiff.stop))
-    .pipe(gulp.dest(paths.bundles))
+    .pipe(gulp.dest(paths.build))
     .pipe(utils.ifDevelopment(connect.reload));
 });

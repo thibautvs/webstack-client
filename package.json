@@ -30,6 +30,7 @@
     "karma-sinon": "^1.0.3",
     "map-stream": "^0.1.0",
     "protractor": "~0.20.1",
+    "run-sequence": "^0.3.6",
     "shelljs": "^0.2.6"
   },
   "scripts": {
