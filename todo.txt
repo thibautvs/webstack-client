@@ -1,5 +1,4 @@
 - configure gulp
-  * minify html
   * HTML report for unit and e2e tests (logs folder)
   * configure protractor with mocha + test sinon
   * only minify + bundle if production, not dev + fingerprint bundles
