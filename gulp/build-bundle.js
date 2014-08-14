@@ -10,7 +10,7 @@ var rev = require('gulp-rev');
 var utils = require('./utils');
 var paths = require('./config').paths;
 
-gulp.task('build-bundle', ['build-index'], function () {
+gulp.task('build-bundle', function () {
   if (utils.isDevelopment) return;
 
   return gulp.src(paths.html.index)

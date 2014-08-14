@@ -5,9 +5,9 @@ var runSequence = require('run-sequence');
 var utils = require('./gulp/utils');
 
 require('./gulp/build-begin');
+require('./gulp/build-index');
 require('./gulp/build-sass');
 require('./gulp/build-bundle');
-require('./gulp/build-index');
 require('./gulp/build-end');
 require('./gulp/js-hint');
 require('./gulp/run-unit-tests');
@@ -18,6 +18,7 @@ require('./gulp/livereload');
 gulp.task('build', function (cb) {
   runSequence(
     'build-begin',
+    'build-index',
     'build-sass',
     'build-bundle',
     'build-end',
