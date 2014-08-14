@@ -6,6 +6,7 @@ module.exports = {
     build: './app/build/',
     html: {
       src: './app',
+      index: './app/index.html',
       indexTemplate: './app/index.tmpl',
       files: [
         './app/index.tmpl',
