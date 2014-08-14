@@ -12,13 +12,13 @@ var paths = require('./config').paths;
 
 gulp.task('build-bundle', ['build-index'], function () {
   if (utils.isDevelopment) return;
-  
+
   return gulp.src(paths.html.index)
     .pipe(usemin({
       css: [
         'concat',
         byteDiff.start(),
-        minifyCss(),
+        minifyCss({keepSpecialComments: 0}),
         byteDiff.stop(),
         rev()
       ],
