@@ -1,7 +1,6 @@
 - configure gulp
   * HTML report for unit and e2e tests (logs folder)
   * configure protractor with mocha + test sinon
-  * bundle : fingerprint CSS & JS
   * watcher for JSHint
   * update gulp-ruby-sass (sourcemap not working, wrong path)
   * remove index.html from source control
