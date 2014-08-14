@@ -5,6 +5,11 @@ var utils = require('./utils');
 var paths = require('./config').paths;
 
 gulp.task('watch', function () {
+  gulp.watch(paths.html.indexTemplate, ['build-index'])
+    .on('change', function (file) {
+      utils.logWatchEvent(utils.trimHtmlPath(file.path), file.type, 'generating index.html');
+    });
+
   gulp.watch(paths.html.files, ['livereload'])
     .on('change', function (file) {
       utils.logWatchEvent(utils.trimHtmlPath(file.path), file.type, 'reloading');

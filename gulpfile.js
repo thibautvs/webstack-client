@@ -7,6 +7,7 @@ var utils = require('./gulp/utils');
 require('./gulp/build-clean');
 require('./gulp/build-sass');
 require('./gulp/build-bundle');
+require('./gulp/build-index');
 require('./gulp/js-hint');
 require('./gulp/run-unit-tests');
 require('./gulp/webserver');

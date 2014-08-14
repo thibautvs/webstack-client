@@ -8,10 +8,7 @@ module.exports = {
       src: './app',
       index: './app/index.html',
       indexTemplate: './app/index.tmpl',
-      files: [
-        './app/index.tmpl',
-        './app/partials/**/*.html'
-      ]
+      files: './app/partials/**/*.html'
     },
     sass: {
       main: './app/sass/app.scss',

@@ -1,7 +1,6 @@
 'use strict';
 
 var gulp = require('gulp');
-var fsSync = require('fs-sync');
 var usemin = require('gulp-usemin');
 var byteDiff = require('gulp-bytediff');
 var minifyCss = require('gulp-minify-css');
@@ -11,24 +10,9 @@ var rev = require('gulp-rev');
 var utils = require('./utils');
 var paths = require('./config').paths;
 
-gulp.task('build-bundle', function () {
-  fsSync.copy(paths.html.indexTemplate, paths.html.index, {force: true});
-
-  if (utils.isDevelopment) {
-    var warningMsg =
-      '<!-- !!! WARNING !!! -->'
-      + utils.endOfLine
-      + '<!-- AUTO GENERATED FILE. DO NOT EDIT, CHANGES WILL BE LOST ! -->'
-      + utils.endOfLine
-      + utils.endOfLine;
-
-    fsSync.write(
-      paths.html.index,
-      warningMsg + fsSync.read(paths.html.index) + warningMsg,
-      {encoding: 'utf8'});
-    return;
-  }
-
+gulp.task('build-bundle', ['build-index'], function () {
+  if (utils.isDevelopment) return;
+  
   return gulp.src(paths.html.index)
     .pipe(usemin({
       css: [

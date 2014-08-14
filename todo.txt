@@ -3,7 +3,6 @@
   * configure protractor with mocha + test sinon
   * watcher for JSHint
   * update gulp-ruby-sass (sourcemap not working, wrong path)
-  * remove index.html from source control
 - i18n and l10n
 - call to ReST API
 - auth
