@@ -3,7 +3,10 @@
 module.exports = {
   paths: {
     app: './app',
-    build: './app/build/',
+    build: {
+      src: './app/build/',
+      css: './app/build/app.css'
+    },
     html: {
       src: './app',
       index: './app/index.html',

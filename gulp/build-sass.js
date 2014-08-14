@@ -16,6 +16,6 @@ gulp.task('build-sass', function () {
       sourcemap: utils.isDevelopment,
       sourcemapPath: paths.sass.sourcemapPath
     }))
-    .pipe(gulp.dest(paths.build))
+    .pipe(gulp.dest(paths.build.src))
     .pipe(utils.ifDevelopment(connect.reload));
 });

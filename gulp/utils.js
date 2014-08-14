@@ -10,11 +10,11 @@ exports.isDevelopment = isDevelopment;
 
 exports.ifDevelopment = function (fn) {
   return isDevelopment ? fn() : gutil.noop();
-}
+};
 
 exports.trimHtmlPath = function (path) {
   return path.replace(/.*(?=app[\\\/])/, '');
-}
+};
 
 exports.trimCssPath = function (path) {
   return path.replace(/.*(?=sass[\\\/])/, '');
@@ -26,19 +26,19 @@ exports.trimJsPath = function (path) {
 
 exports.trimTestPath = function (path) {
   return path.replace(/.*(?=(js|test)[\\\/])/, '');
-}
+};
 
 exports.logError = function (msg) {
   console.error(msg.red);
-}
+};
 
 exports.logSuccess = function (msg) {
   console.log(msg.green);
-}
+};
 
 exports.logWatchEvent = function (path, type, action) {
   console.log('[watcher] File %s was %s, %s...', path, type, action);
-}
+};
 
 exports.logTaskError = function (err) {
   // Makes custom errors more uniform.
@@ -55,4 +55,4 @@ exports.logTaskError = function (err) {
   }
 
   console.error(errorMsg.red);
-}
+};
