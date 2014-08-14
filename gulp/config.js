@@ -5,8 +5,10 @@ module.exports = {
     app: './app',
     build: './app/build/',
     html: {
+      src: './app',
+      indexTemplate: './app/index.tmpl',
       files: [
-        './app/index.html',
+        './app/index.tmpl',
         './app/partials/**/*.html'
       ]
     },

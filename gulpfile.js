@@ -6,7 +6,7 @@ var utils = require('./gulp/utils');
 
 require('./gulp/build-clean');
 require('./gulp/build-sass');
-require('./gulp/js-minify');
+require('./gulp/build-bundle');
 require('./gulp/js-hint');
 require('./gulp/run-unit-tests');
 require('./gulp/webserver');
@@ -17,8 +17,7 @@ gulp.task('build', function (cb) {
   runSequence(
     'build-clean',
     'build-sass',
-    //'build-bundle',
-    //'js-minify',
+    'build-bundle',
     ['js-hint', 'run-unit-tests'],
     cb);
 });

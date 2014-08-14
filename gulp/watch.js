@@ -7,7 +7,12 @@ var paths = require('./config').paths;
 gulp.task('watch', function () {
   gulp.watch(paths.html.files, ['livereload'])
     .on('change', function (file) {
-      utils.logWatchEvent(utils.trimHtmlPath(file.path), file.type, 'minifying');
+      utils.logWatchEvent(utils.trimHtmlPath(file.path), file.type, 'reloading');
+    });
+
+  gulp.watch(paths.js.files, ['livereload'])
+    .on('change', function (file) {
+      utils.logWatchEvent(utils.trimJsPath(file.path), file.type, 'reloading');
     });
 
   gulp.watch(paths.sass.files, ['build-sass'])
@@ -15,12 +20,7 @@ gulp.task('watch', function () {
       utils.logWatchEvent(utils.trimCssPath(file.path), file.type, 'compiling');
     });
 
-  gulp.watch(paths.js.files, ['livereload'])
-    .on('change', function (file) {
-      utils.logWatchEvent(utils.trimJsPath(file.path), file.type, 'minifying + bundling');
-    });
-
-  gulp.watch(paths.tests.unit.filesToWatch, ['js-minify', 'run-unit-tests'])
+  gulp.watch(paths.tests.unit.filesToWatch, ['run-unit-tests'])
     .on('change', function (file) {
       utils.logWatchEvent(utils.trimTestPath(file.path), file.type, 'running tests')
     });
