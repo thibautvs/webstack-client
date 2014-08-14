@@ -10,7 +10,6 @@
     "fs-sync": "^0.2.5",
     "gulp": "^3.8.6",
     "gulp-bytediff": "^0.2.0",
-    "gulp-concat": "^2.3.4",
     "gulp-connect": "^2.0.6",
     "gulp-jshint": "^1.8.4",
     "gulp-karma": "0.0.4",

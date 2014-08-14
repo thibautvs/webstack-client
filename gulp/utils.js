@@ -8,14 +8,8 @@ exports.endOfLine = require('os').EOL;
 
 exports.isDevelopment = isDevelopment;
 
-exports.isProduction = !isDevelopment;
-
 exports.ifDevelopment = function (fn) {
   return isDevelopment ? fn() : gutil.noop();
-}
-
-exports.ifProduction = function (fn) {
-  return isDevelopment ? gutil.noop() : fn();
 }
 
 exports.trimHtmlPath = function (path) {
