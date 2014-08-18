@@ -63,7 +63,7 @@ Production mode is obtained by simply running the `gulp` command.
       sass/             --> sass files
         app.scss        --> main stylesheet
       img/              --> image files
-      index.html        --> app layout file (the main html template file of the app)
+      index.tmpl        --> app layout file (the main html template)
       js/               --> javascript files
         app.js          --> application
         controllers     --> application controllers
@@ -180,13 +180,6 @@ bower update
 This will find the latest versions that match the version ranges specified in the `bower.json` file.
 
 
-## Loading Angular Asynchronously
-
-The app supports loading the framework and application scripts asynchronously.  The
-special `index-async.html` is designed to support this style of loading.  For it to work you must
-inject a piece of Angular JavaScript into the HTML page.  The project has a predefined script to help
-do this.
-
 ```
 npm run update-index-async
 ```
@@ -195,33 +188,13 @@ This will copy the contents of the `angular-loader.js` library file into the `in
 You can run this every time you update the version of Angular that you are using.
 
 
-## Serving the Application Files
-
-While angular is client-side-only technology and it's possible to create angular webapps that
-don't require a backend server at all, we recommend serving the project files using a local
-webserver during development to avoid issues with security restrictions (sandbox) in browsers. The
-sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr,
-etc to function properly when an html page is opened via `file://` scheme instead of `http://`.
-
-
 ### Running the App during Development
 
-The app comes preconfigured with a local development webserver.  It is a node.js
-tool called [http-server][http-server].  You can start this webserver with `npm start` but you may choose to
-install the tool globally:
+The app comes preconfigured with a local development webserver. This is because opening html pages via
+the `file://` scheme instead of `http://` prevents things like cookies, xhr, etc to function properly.
+The server is started automatically by gulp in development mode and can also be started with `npm start`.
 
-```
-sudo npm install -g http-server
-```
-
-Then you can start your own development web server to serve static files from a folder by
-running:
-
-```
-http-server
-```
-
-Alternatively, you can choose to configure your own webserver, such as apache or nginx. Just
+Alternatively, you can choose to configure your own webserver, such as nginx. Just
 configure your server to serve the files under the `app/` directory.
 
 
