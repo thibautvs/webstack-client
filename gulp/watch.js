@@ -15,9 +15,9 @@ gulp.task('watch', function () {
       utils.logWatchEvent(utils.trimHtmlPath(file.path), file.type, 'reloading');
     });
 
-  gulp.watch(paths.js.files, ['livereload'])
+  gulp.watch(paths.js.files, ['livereload', 'js-hint'])
     .on('change', function (file) {
-      utils.logWatchEvent(utils.trimJsPath(file.path), file.type, 'reloading');
+      utils.logWatchEvent(utils.trimJsPath(file.path), file.type, 'reloading + js hinting');
     });
 
   gulp.watch(paths.sass.files, ['build-sass'])
