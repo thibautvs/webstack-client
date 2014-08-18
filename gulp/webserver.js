@@ -6,7 +6,7 @@ var paths = require('./config').paths;
 
 gulp.task('webserver', function () {
   return connect.server({
-    root: paths.app,
+    root: paths.app.relative,
     livereload: true
   })
 });

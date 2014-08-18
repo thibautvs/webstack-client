@@ -28,6 +28,10 @@ exports.trimTestPath = function (path) {
   return path.replace(/.*(?=(js|test)[\\\/])/, '');
 };
 
+exports.normalizePath = function (path) {
+  return path.replace(/\\/g, '/');
+}
+
 exports.logError = function (msg) {
   console.error(msg.red);
 };

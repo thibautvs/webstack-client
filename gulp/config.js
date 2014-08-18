@@ -2,10 +2,14 @@
 
 module.exports = {
   paths: {
-    app: './app',
+    app: {
+      src: 'app',
+      relative: './app'
+    },
     build: {
       src: './app/build/',
-      css: './app/build/app.css'
+      css: './app/build/app.css',
+      cssMap: './app/build/app.css.map'
     },
     html: {
       src: './app',
@@ -14,6 +18,7 @@ module.exports = {
       files: './app/partials/**/*.html'
     },
     sass: {
+      src: 'sass',
       main: './app/sass/app.scss',
       files: './app/sass/**/*.scss',
       sourcemapPath: '../sass'
