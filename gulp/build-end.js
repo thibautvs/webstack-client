@@ -26,11 +26,11 @@ gulp.task('sourcemap-fix', function () {
   var pathToRemove = '/' + paths.sass.src + '/' + pathInfo.join('/') + '/' + paths.app.src;
 
   return fs.readFile(paths.build.cssMap, 'utf8', function (err, data) {
-    if (err) return console.log(err);
+    if (err) return utils.logError(err);
     var res = data.replace(new RegExp(pathToRemove, 'g'), '');
 
     fs.writeFile(paths.build.cssMap, res, 'utf8', function (err) {
-      if (err) return console.log(err);
+      if (err) return utils.logError(err);
     });
   });
 });

@@ -2,7 +2,6 @@
   * HTML report for unit and e2e tests (logs folder)
   * configure protractor with mocha + test sinon
   * watcher for JSHint
-  * update gulp-ruby-sass (sourcemap not working, wrong path)
 - i18n and l10n
 - call to ReST API
 - auth
