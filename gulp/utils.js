@@ -30,7 +30,7 @@ exports.trimTestPath = function (path) {
 
 exports.normalizePath = function (path) {
   return path.replace(/\\/g, '/');
-}
+};
 
 exports.logError = function (msg) {
   console.error(msg.red);
@@ -48,7 +48,7 @@ exports.logTaskError = function (err) {
   // Makes custom errors more uniform.
   // Could be combined with gulp-util or npm colors for nicer output.
   var errorMsg = '[' + err.plugin + ']';
-  errorMsg += ' ' + err.message.replace("\n",'');
+  errorMsg += ' ' + err.message.replace('\n', '');
 
   if (err.fileName) {
     errorMsg += ' in ' + err.fileName;

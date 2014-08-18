@@ -6,5 +6,5 @@ var paths = require('./config').paths;
 
 gulp.task('build-begin', function () {
   return gulp.src(paths.build.src, {read: false})
-    .pipe(rimraf())
+    .pipe(rimraf());
 });

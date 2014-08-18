@@ -27,6 +27,6 @@ gulp.task('watch', function () {
 
   gulp.watch(paths.tests.unit.filesToWatch, ['run-unit-tests'])
     .on('change', function (file) {
-      utils.logWatchEvent(utils.trimTestPath(file.path), file.type, 'running tests')
+      utils.logWatchEvent(utils.trimTestPath(file.path), file.type, 'running tests');
     });
 });

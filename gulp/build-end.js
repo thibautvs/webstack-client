@@ -10,7 +10,7 @@ gulp.task('build-end', ['sourcemap-fix'], function () {
   if (utils.isDevelopment) return;
 
   return gulp.src(paths.build.css, {read: false})
-    .pipe(rimraf())
+    .pipe(rimraf());
 });
 
 gulp.task('sourcemap-fix', function () {

@@ -8,5 +8,5 @@ gulp.task('webserver', function () {
   return connect.server({
     root: paths.app.relative,
     livereload: true
-  })
+  });
 });
