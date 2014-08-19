@@ -8,7 +8,7 @@ It contains the necessary elements to quickly start new developments, namely :
 * SASS compilation with source maps support
 * Bower for dependencies management
 * Gulp for tasks management (minification, bundling, etc) supporting development and production modes
-* JSHint output file for JS errors inspection
+* JSHint output file for JS errors and code quality inspection
 * Lightweight development web server with LiveReload support
 * End-to-end and unit tests using Protractor and Mocha/Chai/Sinon run with Karma on PhantomJS
 * Authentication

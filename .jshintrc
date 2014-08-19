@@ -1,5 +1,17 @@
 {
   "globalstrict": true,
+  "eqeqeq": true,
+  "camelcase": true,
+  "curly": true,
+  "latedef": true,
+  "newcap": true,
+  "noempty": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": "vars",
+  "maxparams": 5,
+  "maxdepth": 5,
+  "maxcomplexity": 6,
   "globals": {
     "angular": false
   }
