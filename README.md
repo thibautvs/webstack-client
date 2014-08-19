@@ -70,7 +70,7 @@ Production mode is obtained by simply running the `gulp` command.
         directives      --> application directives
         filters         --> custom angular filters
         services        --> custom angular services
-      partials/             --> angular view partials (partial html templates)
+      views/            --> angular views (partial html templates)
         home.html
         about.html
 

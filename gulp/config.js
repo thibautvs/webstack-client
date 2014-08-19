@@ -15,7 +15,7 @@ module.exports = {
       src: './app',
       index: './app/index.html',
       indexTemplate: './app/index.tmpl',
-      files: './app/partials/**/*.html'
+      files: './app/views/**/*.html'
     },
     sass: {
       src: 'sass',
