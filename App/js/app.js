@@ -38,5 +38,5 @@ config(function ($routeProvider, $httpProvider) {
     })
     .otherwise({redirectTo: '/404'});
 
-  $httpProvider.responseInterceptors.push('HttpResponseInterceptor');
+  $httpProvider.interceptors.push('HttpInterceptor');
 });
