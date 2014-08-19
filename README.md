@@ -7,10 +7,11 @@ It contains the necessary elements to quickly start new developments, namely :
 * Folder hierarchy enabling app scalability + standardize source code organization across projects
 * SASS compilation with source maps support
 * Bower for dependencies management
-* Gulp for tasks management (minification, bundling, etc) supporting development and production modes
+* Gulp for tasks management (minification, bundling, etc) with development and production modes
 * JSHint output file for JS errors and code quality inspection
 * Lightweight development web server with LiveReload support
 * End-to-end and unit tests using Protractor and Mocha/Chai/Sinon run with Karma on PhantomJS
+* Http interceptors for 404 and 500 errors handling
 * Authentication
 * i18n and l10n
 * Wiring with a ReST API
@@ -68,6 +69,7 @@ Production mode is obtained by simply running the `gulp` command.
         app.js          --> application
         controllers     --> application controllers
         directives      --> application directives
+        factories       --> custom angular factories
         filters         --> custom angular filters
         services        --> custom angular services
       views/            --> angular views (partial html templates)

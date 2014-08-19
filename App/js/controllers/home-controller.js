@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.controllers')
-  .controller('HomeController', function ($scope) {
+angular.module('myApp.controllers').
+  controller('HomeController', function ($scope) {
 
   });

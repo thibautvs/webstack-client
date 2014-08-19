@@ -3,19 +3,40 @@
 // Declare individual modules
 angular.module('myApp.controllers', []);
 angular.module('myApp.directives', []);
+angular.module('myApp.factories', []);
 angular.module('myApp.filters', []);
 angular.module('myApp.services', []);
 
-// Declare app level module which depends on filters, and services
+// Declare app level module + dependencies
 angular.module('myApp', [
   'ngRoute',
-  'myApp.filters',
-  'myApp.services',
+  'myApp.controllers',
   'myApp.directives',
-  'myApp.controllers'
+  'myApp.factories',
+  'myApp.filters',
+  'myApp.services'
 ]).
-config(function ($routeProvider) {
-  $routeProvider.when('/home', {templateUrl: 'views/home.html', controller: 'HomeController'});
-  $routeProvider.when('/about', {templateUrl: 'views/about.html', controller: 'AboutController'});
-  $routeProvider.otherwise({redirectTo: '/home'});
+config(function ($routeProvider, $httpProvider) {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'views/home.html',
+      controller: 'HomeController'
+    })
+    .when('/home', {
+      templateUrl: 'views/home.html',
+      controller: 'HomeController'
+    })
+    .when('/about', {
+      templateUrl: 'views/about.html',
+      controller: 'AboutController'
+    })
+    .when('/404', {
+      templateUrl: 'views/404.html'
+    })
+    .when('/500', {
+      templateUrl: 'views/500.html'
+    })
+    .otherwise({redirectTo: '/404'});
+
+  $httpProvider.responseInterceptors.push('HttpResponseInterceptor');
 });
