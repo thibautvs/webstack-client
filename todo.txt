@@ -1,6 +1,6 @@
 - configure gulp
   * HTML report for unit and e2e tests (logs folder)
-  * configure protractor with mocha + test sinon
+  * configure protractor with mocha
 - i18n and l10n
 - call to ReST API
 - auth
