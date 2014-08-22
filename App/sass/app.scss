@@ -1,9 +1,10 @@
 // config
 @import "config/variables.scss";
 
-// helpers
-@import "helpers/functions.scss";
-@import "helpers/mixins.scss";
+// utils
+@import "utils/functions.scss";
+@import "utils/mixins.scss";
+@import "utils/placeholders.scss";
 
 // base
 @import "base/grid.scss";
