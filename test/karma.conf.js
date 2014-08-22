@@ -17,7 +17,11 @@ module.exports = function (config) {
 
     preprocessors: {},
 
-    reporters: ['progress'],
+    reporters: ['mocha'],
+
+    mochaReporter: {
+      output: 'minimal'
+    },
 
     port: 9876,
 
