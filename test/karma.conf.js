@@ -17,10 +17,14 @@ module.exports = function (config) {
 
     preprocessors: {},
 
-    reporters: ['mocha'],
+    reporters: ['mocha', 'html'],
 
     mochaReporter: {
       output: 'minimal'
+    },
+
+    htmlReporter: {
+      outputFile: 'logs/unit-tests.html'
     },
 
     port: 9876,
