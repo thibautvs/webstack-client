@@ -1,27 +1,27 @@
 // config
-@import "config/variables.scss";
+@import "config/variables";
 
 // utils
-@import "utils/functions.scss";
-@import "utils/mixins.scss";
-@import "utils/placeholders.scss";
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/placeholders";
 
 // base
-@import "base/grid.scss";
-@import "base/typography.scss";
+@import "base/grid";
+@import "base/typography";
 
 // components
-@import "components/buttons.scss";
-@import "components/inputs.scss";
-@import "components/popups.scss";
+@import "components/buttons";
+@import "components/inputs";
+@import "components/popups";
 
 // layout
-@import "layout/header.scss";
-@import "layout/footer.scss";
-@import "layout/menu.scss";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/menu";
 
 // pages
-@import "pages/home.scss";
-@import "pages/about.scss";
-@import "pages/404.scss";
-@import "pages/500.scss";
+@import "pages/home";
+@import "pages/about";
+@import "pages/404";
+@import "pages/500";
