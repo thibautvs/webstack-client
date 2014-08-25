@@ -123,21 +123,21 @@ npm run test-single-run
 ### End to end testing
 
 The app comes with end-to-end tests, again written in [Mocha][mocha]/[Chai][chai]/[Sinon][sinon].
-These tests are run with the [Protractor][protractor] End-to-End test runner.  It uses native events and has
+These tests are run with the [Protractor][protractor] End-to-End test runner. It uses native events and has
 special features for Angular applications.
 
 * the configuration is found at `test/protractor-conf.js`
 * the end-to-end tests are found in `test/e2e/`
 
 Protractor simulates interaction with our web app and verifies that the application responds
-correctly. Therefore, our web server needs to be serving up the application, so that Protractor
+correctly. Therefore, a web server needs to be serving up the application, so that Protractor
 can interact with it.
 
 ```
-npm start
+npm start (or gulp --dev)
 ```
 
-In addition, since Protractor is built upon WebDriver we need to install this.  The app
+In addition, since Protractor is built upon WebDriver we need to install this. The app
 comes with a predefined script to do this:
 
 ```
@@ -146,7 +146,7 @@ npm run update-webdriver
 
 This will download and install the latest version of the stand-alone WebDriver tool.
 
-Once you have ensured that the development web server hosting our application is up and running
+Once you have ensured that the development web server hosting the application is up and running
 and WebDriver is updated, you can run the end-to-end tests using the supplied npm script:
 
 ```
