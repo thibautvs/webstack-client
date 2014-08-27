@@ -1,3 +1,8 @@
 - i18n and l10n
 - call to ReST API
 - auth
+
+later
+-----
+- when WebDriver releases a new version, set timeout back in protractor-conf.js
+- add a custom HTML reporter in protractor when it will exist for Mocha (currently Jasmine only)
