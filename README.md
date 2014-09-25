@@ -10,7 +10,7 @@ WebStack was designed with the following goals in mind :
 * **Performant** : to build great products and great user experiences
 * **Productive** : for fast time to market, quick iterations and staying ahead of competition
 * **API first** : the web client is considered one of the many potential clients (smartphones, watches)
-* **Business ready** : multi-lingual support, authentication + roles, etc
+* **Business ready** : scalable codebase, multi-lingual support, authentication + roles, etc
 * **Open source** : innovative, lightweight and standards-compliant technologies
 
 The WebStack logo is purple, the color of good judgment.
