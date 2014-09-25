@@ -8,8 +8,8 @@ WebStack was designed with the following goals in mind :
 
 * **Reliable** : technologies on which your business can confidently rely upon. Application stability and data integrity before satisfying one's inner nerd with shiny new tools
 * **Performant** : to build great products and great user experiences
-* **Productive** : for fast time to market, quick iterations and feedback loop and staying ahead of competition
-* **API first** : the web client is considered one of the many potential clients (smartphones, watches, ...)
+* **Productive** : for fast time to market, quick iterations and staying ahead of competition
+* **API first** : the web client is considered one of the many potential clients (smartphones, watches)
 * **Business ready** : multi-lingual support, authentication + roles, etc
 * **Open source** : innovative, lightweight and standards-compliant technologies
 
