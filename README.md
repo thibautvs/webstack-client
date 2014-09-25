@@ -18,7 +18,7 @@ The WebStack logo is purple, the color of good judgment.
 #Technology Stack
 
 The client part of WebStack is composed of the technologies listed below. For the rationale behind these choices,
-please refer to the [Design Decisions][] section.
+please refer to the [Design Decisions][designdecisions] section.
 
 * HTML5
 * CSS3
@@ -237,7 +237,7 @@ configure your server to serve the files under the `app/` directory.
 Run the `gulp` command to perform compilation, minification and bundling of assets.
 
 
-# Design Decisions
+# Design Decisions [designdecisions]
 
 The goal of this section is to document the design decisions so that developers can better understand the process that has led to the assembling of WebStack. This can also serve as a base for future discussion when challenging particular decisions and find out why it has been implemented like that in the first place.
 
