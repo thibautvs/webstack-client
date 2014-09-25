@@ -18,7 +18,7 @@ The WebStack logo is purple, the color of good judgment.
 #Technology Stack
 
 The client part of WebStack is composed of the technologies listed below. For the rationale behind these choices,
-please refer to the [Design Decisions](#Design-Decisions) section.
+please refer to the [Design Decisions](#design-decisions) section.
 
 * HTML5
 * CSS3
