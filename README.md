@@ -6,7 +6,7 @@
 
 WebStack was designed with the following goals in mind :
 
-* **Reliable** : technologies on which your business can confidently rely upon. Application stability and data integrity before satisfying one's inner nerd with shiny new tools
+* **Reliable** : technologies on which your business can confidently rely upon, application stability and data integrity before satisfying one's inner nerd with shiny new tools
 * **Performant** : to build great products and great user experiences
 * **Productive** : for fast time to market, quick iterations and staying ahead of competition
 * **API first** : the web client is considered one of the many potential clients (smartphones, watches)
@@ -18,7 +18,7 @@ The WebStack logo is purple, the color of good judgment.
 #Technology Stack
 
 The client part of WebStack is composed of the technologies listed below. For the rationale behind these choices,
-please refer to the *Design Decisions* section.
+please refer to the [Design Decisions][designdecisions] section.
 
 * HTML5
 * CSS3
@@ -317,3 +317,4 @@ The goal of this section is to document the design decisions so that developers 
 [foundation]: http://foundation.zurb.com/
 [bootstrap]: http://getbootstrap.com/
 [moreadvanced]: http://blog.teamtreehouse.com/use-bootstrap-or-foundation
+[designdecisions]: https://github.com/Urge2code/webstack-client#design-decisions
