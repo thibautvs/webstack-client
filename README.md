@@ -1,4 +1,4 @@
-<img src="http://thibautvs.com/blog/img/urge2code/webstack_purple.png" />
+<img src="http://thibautvs.com/blog/img/urge2code/webstack.png" />
 
 
 
