@@ -1,7 +1,44 @@
-# Vanilla App
+<img src="http://thibautvs.com/blog/img/urge2code/webstack_purple.png" />
 
-This project is an application skeleton for a typical VOO website.
-It contains the necessary elements to quickly start new developments, namely :
+
+
+#Philosophy
+
+WebStack was designed with the following goals in mind :
+
+* **Reliable** : technologies on which your business can confidently rely upon. Application stability and data integrity before satisfying one's inner nerd with shiny new tools
+* **Performant** : to build great products and great user experiences
+* **Productive** : for fast time to market, quick iterations and feedback loop and staying ahead of competition
+* **API first** : the web client is considered one of the many potential clients (smartphones, watches, ...)
+* **Business ready** : multi-lingual support, authentication + roles, etc
+* **Open source** : innovative, lightweight and standards-compliant technologies
+
+The WebStack logo is purple, the color of good judgment.
+
+#Technology Stack
+
+The client part of WebStack is composed of the technologies listed below. For the rationale behind these choices,
+please refer to the *Design Decisions* section.
+
+* HTML5
+* CSS3
+* SASS
+* JavaScript
+* AngularJS
+* Gulp
+* JsHint
+* Karma / Protractor
+* Mocha / Chai / Sinon
+* PhantomJS
+* Zurb Foundation Grid
+* Normalize CSS
+* Bower
+* LiveReload
+
+
+# Documentation
+
+WebStack contains all the necessary elements to start new developments, namely :
 
 * AngularJS setup : working controllers, views, directives, factories, filters and services
 * Project structure : files organized for easier maintenance and scalability
@@ -200,32 +237,11 @@ configure your server to serve the files under the `app/` directory.
 Run the `gulp` command to perform compilation, minification and bundling of assets.
 
 
-## Continuous Integration
+#Design Decisions
 
-### Travis CI
-
-[Travis CI][travis] is a continuous integration service, which can monitor GitHub for new commits
-to your repository and execute scripts such as building the app or running tests. The app
-contains a Travis configuration file, `.travis.yml`, which will cause Travis to run your
-tests when you push to GitHub.
-
-You will need to enable the integration between Travis and GitHub. See the Travis website for more
-instruction on how to do this.
-
-### CloudBees
-
-CloudBees have provided a CI/deployment setup:
-
-<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/angular-js-clickstart/master/clickstart.json">
-<img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
-
-If you run this, you will get a cloned version of this repo to start working on in a private git repo,
-along with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.
+Insert design decisions here
 
 
-## Contact
-
-For more information on AngularJS please check out http://angularjs.org/
 
 [git]: http://git-scm.com/
 [bower]: http://bower.io
