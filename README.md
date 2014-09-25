@@ -4,7 +4,7 @@
 
 #Philosophy
 
-WebStack was designed to be :
+WebStack is designed to be :
 
 * **Reliable** : technologies on which your business can confidently rely upon
 * **Performant** : to build great products and great user experiences
