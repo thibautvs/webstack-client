@@ -10,6 +10,7 @@ angular.module('myApp.services', []);
 // Declare app level module + dependencies
 angular.module('myApp', [
   'ngRoute',
+  'ngResource',
   'myApp.controllers',
   'myApp.directives',
   'myApp.factories',
@@ -25,6 +26,10 @@ config(function ($routeProvider, $httpProvider) {
     .when('/home', {
       templateUrl: 'views/home.html',
       controller: 'HomeController'
+    })
+    .when('/products', {
+      templateUrl: 'views/products.html',
+      controller: 'ProductsController'
     })
     .when('/about', {
       templateUrl: 'views/about.html',
