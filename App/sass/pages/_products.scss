@@ -1,0 +1,25 @@
+section#products {
+  table {
+    th, td {
+      padding: 5px 25px 5px 5px;
+    }
+
+    tr th {
+      color: #fff;
+      background-color: #666;
+    }
+
+    tr:nth-child(odd) td {
+      background-color: #eee;
+    }
+  }
+
+  a {
+    color: blue;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

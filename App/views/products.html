@@ -1,8 +1,57 @@
 <section id="products">
   <h1>Products</h1>
-  <ul ng-repeat="product in products">
-    <li>{{product.name}} ({{product.price}} €)</li>
-  </ul>
 
-  <p>Single product : {{singleProduct.name}}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="product in products">
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td><a ng-click="editProduct(product)">Edit</a></td>
+        <td><a ng-click="deleteProduct(product)">Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Single product : {{singleProduct.name}}  ({{singleProduct.price}})</p>
+  <p>
+    <a ng-click="addProduct()">Add</a>
+  </p>
+
+  <div ng-show="showAddPane">
+    <h2>Add product</h2>
+    <p>
+      <label>Name: </label>
+      <input ng-model="productName" />
+    </p>
+    <p>
+      <label>Price: </label>
+      <input ng-model="productPrice" />
+    </p>
+    <p>
+      <a ng-click="saveNewProduct()">Save</a>
+    </p>
+  </div>
+
+  <div ng-show="showEditPane">
+    <h2>Edit product</h2>
+    <p>
+      <label>Name: </label>
+      <input ng-model="productName" />
+    </p>
+    <p>
+      <label>Price: </label>
+      <input ng-model="productPrice" />
+    </p>
+    <p>
+      <a ng-click="saveUpdatedProduct()">Save</a>
+    </p>
+  </div>
 </section>

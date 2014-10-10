@@ -2,5 +2,5 @@
 
 angular.module('myApp.services').
   service('Product', function ($resource) {
-    return $resource('http://localhost:3000/products/:id');
+    return $resource('http://localhost:3000/products/:id', {id: '@id'}, {update: {method: 'PUT'}});
   });
