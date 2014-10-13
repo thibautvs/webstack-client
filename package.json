@@ -1,8 +1,8 @@
 {
-  "name": "VanillaApp",
+  "name": "webstack-client",
   "private": true,
   "version": "0.5.1",
-  "description": "A starter project for VOO websites",
+  "description": "A business-ready web technology stack",
   "devDependencies": {
     "bower": "^1.3.1",
     "chai": "^1.9.1",
@@ -49,5 +49,10 @@
     "update-webdriver": "webdriver-manager update",
     "preprotractor": "npm run update-webdriver",
     "protractor": "protractor test/protractor-conf.js"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Urge2code/webstack-client.git"
+  },
+  "homepage": "https://github.com/Urge2code/webstack-client"
 }
