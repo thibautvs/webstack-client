@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('myApp.services').
-  service('Product', function ($resource) {
-    return $resource('http://localhost:3000/products/:id', {id: '@id'}, {update: {method: 'PUT'}});
+  service('Product', function ($resource, CONFIG) {
+    return $resource(CONFIG.API_URL + '/products/:id', {id: '@id'}, {update: {method: 'PUT'}});
   });

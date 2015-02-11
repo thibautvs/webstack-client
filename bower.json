@@ -1,6 +1,6 @@
 {
-  "name": "VanillaApp",
-  "description": "A starter project for VOO websites",
+  "name": "WebStack",
+  "description": "A business-ready web technology stack",
   "version": "0.0.1",
   "private": true,
   "dependencies": {

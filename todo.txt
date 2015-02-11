@@ -1,5 +1,4 @@
 - i18n and l10n
-- call to ReST API
 - auth
 
 later

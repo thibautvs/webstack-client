@@ -16,8 +16,11 @@ angular.module('myApp', [
   'myApp.factories',
   'myApp.filters',
   'myApp.services'
-]).
-config(function ($routeProvider, $httpProvider) {
+])
+.constant('CONFIG', {
+  'API_URL': 'http://localhost:3000'
+})
+.config(function ($routeProvider, $httpProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/home.html',
