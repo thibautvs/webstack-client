@@ -1,8 +1,8 @@
 'use strict';
 
 var gulp = require('gulp');
-var utils = require('./utils');
-var paths = require('./config').paths;
+var utils = require('../utils');
+var paths = require('../config').paths;
 
 gulp.task('watch', function () {
   gulp.watch(paths.html.indexTemplate, ['build-index'])

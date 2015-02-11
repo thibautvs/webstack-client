@@ -6,10 +6,15 @@ module.exports = {
       src: 'app',
       relative: './app'
     },
-    build: {
-      src: './app/build/',
-      css: './app/build/app.css',
-      cssMap: './app/build/app.css.map'
+    bundles: {
+      src: './app/bundles',
+      css: {
+        app: './app/bundles/app.css',
+        map: './app/bundles/app.css.map'
+      }
+    },
+    package: {
+      src: './package'
     },
     html: {
       src: './app',
@@ -24,7 +29,11 @@ module.exports = {
       sourcemapPath: '../sass'
     },
     js: {
-      files: './app/js/**/*.js'
+      files: './app/js/**/*.js',
+      config: {
+        src: './app/js/config',
+        dest: './app/js/config.js'
+      }
     },
     logs: {
       src: 'logs',

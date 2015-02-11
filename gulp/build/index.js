@@ -3,13 +3,13 @@
 var gulp = require('gulp');
 var fsSync = require('fs-sync');
 var connect = require('gulp-connect');
-var utils = require('./utils');
-var paths = require('./config').paths;
+var utils = require('../utils');
+var paths = require('../config').paths;
 
 gulp.task('build-index', function () {
   fsSync.copy(paths.html.indexTemplate, paths.html.index, {force: true});
 
-  if (utils.isDevelopment) {
+  if (utils.isDevelopment()) {
     var warningMsg =
       '<!-- !!! WARNING !!! -->'
       + utils.endOfLine

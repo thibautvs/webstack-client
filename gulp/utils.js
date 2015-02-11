@@ -2,14 +2,23 @@
 
 var gutil = require('gulp-util');
 var colors = require('colors');
-var isDevelopment = gutil.env.dev;
 
 exports.endOfLine = require('os').EOL;
 
-exports.isDevelopment = isDevelopment;
+exports.getEnv = function () {
+  if (!!gutil.env.test)
+    return 'test';
+  if (!!gutil.env.prod)
+    return 'prod';
+  return 'dev';
+};
+
+exports.isDevelopment = function () {
+  return exports.getEnv() === 'dev';
+};
 
 exports.ifDevelopment = function (fn) {
-  return isDevelopment ? fn() : gutil.noop();
+  return exports.isDevelopment() ? fn() : gutil.noop();
 };
 
 exports.trimHtmlPath = function (path) {
@@ -32,8 +41,14 @@ exports.normalizePath = function (path) {
   return path.replace(/\\/g, '/');
 };
 
-exports.logError = function (msg) {
-  console.error(msg.red);
+exports.logError = function (err) {
+  if (err.message !== undefined) {
+    console.error(err.message.red);
+  } else if (typeof err === 'string') {
+    console.error(err.red);
+  } else {
+    console.error(err);
+  }
 };
 
 exports.logSuccess = function (msg) {

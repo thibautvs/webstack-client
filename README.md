@@ -43,14 +43,15 @@ WebStack contains all the necessary elements to start new developments, namely :
 * AngularJS setup : working controllers, views, directives, factories, filters and services
 * Project structure : files organized for easier maintenance and scalability
 * Styles setup : Normalize.css, SASS compilation with source maps support, must-have mixins and responsive grid (Zurb Foundation)
-* 3rd party dependencies management (Bower)
-* Minification, bundling, and other tasks management with development and production modes (Gulp)
+* Build: minification, bundling, and other related tasks
+* Packaging: preparing a package configured for a specific environment like test or prod, ready to be deployed
 * JS errors reporting and code quality inspection (JSHint)
 * Unit and end-to-end tests configuration (Karma/Protractor/Mocha/Chai/Sinon/PhantomJS)
 * Global error handling and authentication (HTTP interceptors)
 * i18n and l10n
 * Wiring with a ReST API
 * Lightweight development web server with LiveReload support
+* 3rd party dependencies management (Bower)
 * ...
 
 ### Install Dependencies
@@ -90,9 +91,18 @@ and starts a light development web server configured with [LiveReload][livereloa
 
 The app can then be accessed at `http://localhost:8080`.
 
-Production mode is obtained by simply running the `gulp` command.
+### Package the application for deployment
 
+To package the application, use the `gulp package --env` command, where 'env' is
+one of the following values : test or prod. So, one of the following :
 
+```
+gulp package --test
+gulp package --prod
+```
+
+This will generate a folder related to the desired environment in the package folder,
+for example : package/prod. It will contain the 'App' folder, ready to be deployed.
 
 ## Directory Layout
 
@@ -174,7 +184,7 @@ npm start
 or
 
 ```
-gulp --dev
+gulp
 ```
 
 In addition, WebDriver needs to be installed since Protractor is built upon it:
@@ -214,14 +224,6 @@ bower update
 This will find the latest versions that match the version ranges specified in the `bower.json` file.
 
 
-```
-npm run update-index-async
-```
-
-This will copy the contents of the `angular-loader.js` library file into the `index-async.html` page.
-You can run this every time you update the version of Angular that you are using.
-
-
 ### Running the App during Development
 
 The app comes preconfigured with a local development webserver. This is because opening html pages via
@@ -252,12 +254,12 @@ The goal of this section is to document the design decisions so that developers 
 * **Styles** :
 
   * **CSS preprocessor** : [Sass][sass] with the scss syntax have been chosen. This is widely considered by the community as a superior alternative to [Less][less] (no real mixins, ...) and [Stylus][stylus] (syntax too different from CSS, not actively maintained anymore). In development mode, sourcemaps are being provided to facilitate css debugging.
-  
+
   * **Reset file** : [Normalize.css][normalize] has been prefered over [ResetCSS][reset] because it preserves browser defaults and builds upon them instead of unstyling everything and fixes bugs out of scope of ResetCSS, among other things. Also, Normalize.css is being used by Zurb Foundation and Twitter Bootstrap. More info can be found in this [article about Normalize][normalizearticle].
 
 
   * **Responsive grid** : [Zurb Foundation][foundation] has been preferred over [Twitter Bootstrap][bootstrap] because [more advanced and robust][moreadvanced], even though the difference is minor. The class names are also more intuitive in Foundation than in Bootstrap (ex: "large-4 columns" vs ".col-lg-4").
-  
+
 * **JS code inspection** : 2 main competitors : [JSLint][jslint] and [JSHint][jshint]. JSLint is the original initiative, maintained by Douglas Crockford, JS Architect at Yahoo. This tool is extremely severe (eg: a couple of lines of what you consider perfectly valid JS will trigger errors because things have to be indented in a specific way, etc). So that's why the community created JSHint, a tool where there is not a single authority declaring how JS must be written, more pragmatic when it comes to reporting : many developers abandonned JSLint because of the amount of ridiculous errors they had, creating noise around more compelling warnings/errors. [JSHint can be configured][jshintconfig] to determine which rules the inspection process has to validate, which can't be done with JSLint. Thus JSHint was selected as a task executed by Gulp, which produces a js-hint.txt report file in the logs folder.
 
 * **3rd party libraries** : the only external libraries added to the project are AngularJS, NormalizeCSS (see reasoning about those above) and Html5shiv as a much more lightweight alternative to Modernizr, conditionally included for IE < 9. It was decided not to include jQuery as all these tasks are now supposed to be accomplished in Angular. It's especially important for developers new to this technology to learn to do things "the Angular way" (no logic in views, super thin controllers, DOM manipulation only in directives, services instead of direct AJAX calls, among many other things). jQuery could still be added later on if absolutely needed.

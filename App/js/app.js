@@ -8,43 +8,42 @@ angular.module('myApp.filters', []);
 angular.module('myApp.services', []);
 
 // Declare app level module + dependencies
-angular.module('myApp', [
-  'ngRoute',
-  'ngResource',
-  'myApp.controllers',
-  'myApp.directives',
-  'myApp.factories',
-  'myApp.filters',
-  'myApp.services'
-])
-.constant('CONFIG', {
-  'API_URL': 'http://localhost:3000'
-})
-.config(function ($routeProvider, $httpProvider) {
-  $routeProvider
-    .when('/', {
-      templateUrl: 'views/home.html',
-      controller: 'HomeController'
-    })
-    .when('/home', {
-      templateUrl: 'views/home.html',
-      controller: 'HomeController'
-    })
-    .when('/products', {
-      templateUrl: 'views/products.html',
-      controller: 'ProductsController'
-    })
-    .when('/about', {
-      templateUrl: 'views/about.html',
-      controller: 'AboutController'
-    })
-    .when('/404', {
-      templateUrl: 'views/404.html'
-    })
-    .when('/500', {
-      templateUrl: 'views/500.html'
-    })
-    .otherwise({redirectTo: '/404'});
+angular
+  .module('myApp', [
+    'ngRoute',
+    'ngResource',
+    'myApp.config',
+    'myApp.controllers',
+    'myApp.directives',
+    'myApp.factories',
+    'myApp.filters',
+    'myApp.services'
+    ])
+  .config(function ($routeProvider, $httpProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeController'
+      })
+      .when('/home', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeController'
+      })
+      .when('/products', {
+        templateUrl: 'views/products.html',
+        controller: 'ProductsController'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutController'
+      })
+      .when('/404', {
+        templateUrl: 'views/404.html'
+      })
+      .when('/500', {
+        templateUrl: 'views/500.html'
+      })
+      .otherwise({redirectTo: '/404'});
 
-  $httpProvider.interceptors.push('HttpInterceptor');
-});
+    $httpProvider.interceptors.push('HttpInterceptor');
+  });

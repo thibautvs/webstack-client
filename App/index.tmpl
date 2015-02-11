@@ -8,9 +8,9 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- build:css build/app.css -->
+  <!-- build:css bundles/app.css -->
   <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
-  <link rel="stylesheet" href="build/app.css">
+  <link rel="stylesheet" href="bundles/app.css">
   <!-- endbuild -->
 
   <!--[if lt IE 9]>
@@ -30,13 +30,14 @@
 
   <div ng-view></div>
 
-  <!-- build:js build/app.js -->
+  <!-- build:js bundles/app.js -->
   <!-- libraries -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
 
   <!-- application -->
+  <script src="js/config.js"></script>
   <script src="js/app.js"></script>
 
   <!-- controllers -->

@@ -4,8 +4,8 @@ var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var plumber = require('gulp-plumber');
 var connect = require('gulp-connect');
-var utils = require('./utils');
-var paths = require('./config').paths;
+var utils = require('../utils');
+var paths = require('../config').paths;
 
 gulp.task('build-sass', function () {
   return gulp.src(paths.sass.main)
@@ -13,9 +13,8 @@ gulp.task('build-sass', function () {
       errorHandler: utils.logTaskError
     }))
     .pipe(sass({
-      sourcemap: utils.isDevelopment,
       sourcemapPath: paths.sass.sourcemapPath
     }))
-    .pipe(gulp.dest(paths.build.src))
+    .pipe(gulp.dest(paths.bundles.src))
     .pipe(utils.ifDevelopment(connect.reload));
 });

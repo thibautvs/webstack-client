@@ -2,7 +2,7 @@
 
 var gulp = require('gulp');
 var connect = require('gulp-connect');
-var paths = require('./config').paths;
+var paths = require('../config').paths;
 
 gulp.task('webserver', function () {
   return connect.server({

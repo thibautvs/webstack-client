@@ -4,12 +4,12 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var map = require('map-stream');
 var fs = require('fs');
-var utils = require('./utils');
-var paths = require('./config').paths;
+var utils = require('../utils');
+var paths = require('../config').paths;
 var jsErrors = false;
 
 gulp.task('js-hint', function () {
-  if (!utils.isDevelopment) return;
+  if (!utils.isDevelopment()) return;
 
   return fs.mkdir(paths.logs.src, function (err) {
     fs.unlink(paths.logs.jsHint, function (err) {
