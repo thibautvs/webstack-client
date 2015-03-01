@@ -6,7 +6,7 @@
     => $translateProvider.determinePreferredLanguage() custom impl.
     => remove localStorage of angular-translate (and cookieStorage dependency)
 - logging
-- typescript
+- typescript, loDash, moment.js
 
 later
 -----
