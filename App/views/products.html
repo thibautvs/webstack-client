@@ -1,11 +1,11 @@
 <section id="products">
-  <h1>Products</h1>
+  <h1>{{'PRODUCTS' | translate}}</h1>
 
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Price</th>
+        <th>{{'NAME' | translate}}</th>
+        <th>{{'PRICE' | translate}}</th>
         <th>&nbsp;</th>
         <th>&nbsp;</th>
       </tr>
@@ -14,44 +14,44 @@
       <tr ng-repeat="product in products">
         <td>{{product.name}}</td>
         <td>{{product.price}}</td>
-        <td><a ng-click="editProduct(product)">Edit</a></td>
-        <td><a ng-click="deleteProduct(product)">Delete</a></td>
+        <td><a ng-click="editProduct(product)">{{'EDIT' | translate}}</a></td>
+        <td><a ng-click="deleteProduct(product)">{{'DELETE' | translate}}</a></td>
       </tr>
     </tbody>
   </table>
 
-  <p>Single product : {{singleProduct.name}}  ({{singleProduct.price}})</p>
+  <p>{{'PRODUCT_BY_ID' | translate}}: {{singleProduct.name}}  ({{singleProduct.price}})</p>
   <p>
-    <a ng-click="addProduct()">Add</a>
+    <a ng-click="addProduct()">{{'ADD' | translate}}</a>
   </p>
 
   <div ng-show="showAddPane">
-    <h2>Add product</h2>
+    <h2>{{'ADD_PRODUCT' | translate}}</h2>
     <p>
-      <label>Name: </label>
+      <label>{{'NAME' | translate}}: </label>
       <input ng-model="productName" />
     </p>
     <p>
-      <label>Price: </label>
+      <label>{{'PRICE' | translate}}: </label>
       <input ng-model="productPrice" />
     </p>
     <p>
-      <a ng-click="saveNewProduct()">Save</a>
+      <a ng-click="saveNewProduct()">{{'SAVE' | translate}}</a>
     </p>
   </div>
 
   <div ng-show="showEditPane">
-    <h2>Edit product</h2>
+    <h2>{{'EDIT_PRODUCT' | translate}}</h2>
     <p>
-      <label>Name: </label>
+      <label>{{'PRICE' | translate}}: </label>
       <input ng-model="productName" />
     </p>
     <p>
-      <label>Price: </label>
+      <label>{{'PRICE' | translate}}: </label>
       <input ng-model="productPrice" />
     </p>
     <p>
-      <a ng-click="saveUpdatedProduct()">Save</a>
+      <a ng-click="saveUpdatedProduct()">{{'SAVE' | translate}}</a>
     </p>
   </div>
 </section>

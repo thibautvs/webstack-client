@@ -1,5 +1,12 @@
-- i18n and l10n
+- i18n and l10n : check missing translations + check unused translations
 - auth
+  * incl. roles
+  * preferred language of user will have to be persisted in DB (obtained when logged)
+    so he has his language when logged on any computer
+    => $translateProvider.determinePreferredLanguage() custom impl.
+    => remove localStorage of angular-translate (and cookieStorage dependency)
+- logging
+- typescript
 
 later
 -----

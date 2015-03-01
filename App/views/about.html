@@ -1,8 +1,7 @@
 <section id="about">
-  <h1>About</h1>
+  <h1>{{'ABOUT' | translate}}</h1>
   <p>
-    Showing of 'interpolate' filter:
-    {{ 'Current version is v%VERSION%.' | interpolate }}
+    {{'CURRENT_VERSION' | translate}} {{'v%VERSION%' | interpolate}}
   </p>
 
   <div>WebStack: v<span app-version></span></div>

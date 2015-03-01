@@ -1,1 +1,29 @@
-// Add header styles here
+header {
+  margin-bottom: 20px;
+}
+
+#menu {
+  font-family: $font-family;
+  list-style: none;
+  padding: 0;
+  display: inline;
+
+  > li {
+    display: inline;
+
+    &:before {
+      content: "|";
+      padding-right: 0.3em;
+    }
+
+    &:nth-child(1):before {
+      content: "";
+      padding: 0;
+    }
+  }
+}
+
+#lang-select {
+  width: 100px;
+  float: right;
+}

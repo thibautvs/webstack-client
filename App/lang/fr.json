@@ -1,0 +1,20 @@
+{
+  "HOME": "Accueil",
+  "PRODUCTS": "Produits",
+  "ABOUT": "A propos",
+  "RESPONSIVE_GRID": "Grille Responsive",
+  "BLOCK_GRID": "Grille Bloc",
+  "X_ELEMENTS": "{{x}} éléments",
+  "NAME": "Nom",
+  "PRICE": "Prix",
+  "ADD": "Ajouter",
+  "EDIT": "Modifier",
+  "SAVE": "Enregistrer",
+  "DELETE": "Supprimer",
+  "PRODUCT_BY_ID": "Produit par id",
+  "ADD_PRODUCT": "Ajouter produit",
+  "EDIT_PRODUCT": "Modifier produit",
+  "ERROR_404": "Ressource non trouvée",
+  "ERROR_500": "Erreur interne serveur",
+  "CURRENT_VERSION": "Version courante:"
+}

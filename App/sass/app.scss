@@ -17,9 +17,9 @@
 @import "components/popups";
 
 // layout
+@import "layout/global";
 @import "layout/header";
 @import "layout/footer";
-@import "layout/menu";
 
 // pages
 @import "pages/home";

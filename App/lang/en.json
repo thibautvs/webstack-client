@@ -1,0 +1,20 @@
+{
+  "HOME": "Home",
+  "PRODUCTS": "Products",
+  "ABOUT": "About",
+  "RESPONSIVE_GRID": "Responsive Grid",
+  "BLOCK_GRID": "Block Grid",
+  "X_ELEMENTS": "{{x}} elements",
+  "NAME": "Name",
+  "PRICE": "Price",
+  "ADD": "Add",
+  "EDIT": "Edit",
+  "SAVE": "Save",
+  "DELETE": "Delete",
+  "PRODUCT_BY_ID": "Product by id",
+  "ADD_PRODUCT": "Add product",
+  "EDIT_PRODUCT": "Edit product",
+  "ERROR_404": "Not Found",
+  "ERROR_500": "Internal Server Error",
+  "CURRENT_VERSION": "Current version:"
+}
