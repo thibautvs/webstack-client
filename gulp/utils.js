@@ -33,6 +33,10 @@ exports.trimJsPath = function (path) {
   return path.replace(/.*(?=js[\\\/])/, '');
 };
 
+exports.trimJsonPath = function (path) {
+  return path.replace(/.*(?=json[\\\/])/, '');
+};
+
 exports.trimTestPath = function (path) {
   return path.replace(/.*(?=(js|test)[\\\/])/, '');
 };

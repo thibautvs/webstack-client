@@ -25,6 +25,11 @@ gulp.task('watch', function () {
       utils.logWatchEvent(utils.trimCssPath(file.path), file.type, 'compiling');
     });
 
+  gulp.watch(paths.lang.files, ['livereload'])
+    .on('change', function (file) {
+      utils.logWatchEvent(utils.trimJsonPath(file.path), file.type, 'reloading');
+    });
+
   gulp.watch(paths.tests.unit.filesToWatch, ['run-unit-tests'])
     .on('change', function (file) {
       utils.logWatchEvent(utils.trimTestPath(file.path), file.type, 'running tests');

@@ -35,6 +35,9 @@ module.exports = {
         dest: './app/js/config.js'
       }
     },
+    lang: {
+      files: './app/lang/**/*.json',
+    },
     logs: {
       src: 'logs',
       jsHint: 'logs/js-hint.txt'
