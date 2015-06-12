@@ -10,6 +10,11 @@
     "angular-mocks": "~1.2.x",
     "html5shiv": "~3.7.2",
     "normalize-css": "~3.0.1",
-    "angular-resource": "1.2.x"
+    "angular-resource": "1.2.x",
+    "angular-translate": "~2.7.2",
+    "angular-translate-storage-local": "~2.7.2",
+    "angular-translate-storage-cookie": "~2.7.2",
+    "angular-translate-loader-static-files": "~2.7.2",
+    "angular-cookies": "~1.4.0"
   }
 }
