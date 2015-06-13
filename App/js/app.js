@@ -13,6 +13,7 @@ angular.module('myApp', [
     'ngResource',
     'ngCookies',
     'pascalprecht.translate',
+    'ngSanitize',
     'myApp.config',
     'myApp.controllers',
     'myApp.directives',
@@ -53,5 +54,6 @@ angular.module('myApp', [
     .useStaticFilesLoader({
       prefix: '/lang/',
       suffix: '.json'
-    });
+    })
+    .useSanitizeValueStrategy('escape');
 });
