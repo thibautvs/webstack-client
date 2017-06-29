@@ -283,7 +283,7 @@ The goal of this section is to document the design decisions so that developers 
 [npm]: https://www.npmjs.org/
 [node]: http://nodejs.org
 [protractor]: https://github.com/angular/protractor
-[mocha]: http://visionmedia.github.io/mocha/
+[mocha]: http://mochajs.org/
 [chai]: http://chaijs.com/
 [sinon]: http://sinonjs.org/
 [karma]: http://karma-runner.github.io
